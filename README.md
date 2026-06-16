@@ -14,6 +14,10 @@ python script.py
 ```
 Aplikacja automatycznie wyszuka pliki `.json` w folderze `quizes/` i pozwoli Ci wybrać, który quiz chcesz rozwiązać.
 
+Przed rozpoczęciem quizu możesz wybrać:
+- **Od którego pytania zacząć** – przydatne, jeśli chcesz powtórzyć tylko końcówkę materiału.
+- **Czy pokazywać informację o wielokrotnym wyborze** – możesz wyłączyć tę podpowiedź, aby zwiększyć poziom trudności.
+
 ## Jak dodawać własne quizy? ✍️
 
 Wszystkie quizy znajdują się w folderze `quizes/`. Możesz tam wrzucić własne pliki `.json`. Aby ułatwić sobie pracę, możesz poprosić ChatGPT lub innego asystenta AI o przygotowanie takiego pliku.

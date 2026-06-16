@@ -127,7 +127,7 @@ def decode_and_open_image(base64_data, question_number):
         return False
 
 
-def ask_question(question, question_number, total_questions):
+def ask_question(question, question_number, total_questions, show_multiple_choice_info=True):
     clear_console()
     print_header(f"Pytanie {question_number}/{total_questions}")
 
@@ -172,8 +172,11 @@ def ask_question(question, question_number, total_questions):
 
     is_multiple_choice = len(correct_answers) > 1
 
-    if is_multiple_choice:
+    if is_multiple_choice and show_multiple_choice_info:
         print("\nTo pytanie ma wiele poprawnych odpowiedzi.")
+        print(f"Wpisz odpowiedzi razem, np. {''.join(display_labels[:2])} albo {''.join(display_labels)}.")
+    elif is_multiple_choice and not show_multiple_choice_info:
+        print("\nTo pytanie może mieć jedną lub wiele poprawnych odpowiedzi.")
         print(f"Wpisz odpowiedzi razem, np. {''.join(display_labels[:2])} albo {''.join(display_labels)}.")
     else:
         if len(display_labels) > 0:
@@ -222,19 +225,36 @@ def run_quiz(quiz_path):
         input("\nNaciśnij Enter, aby wrócić do menu...")
         return
 
-    score = 0
+    clear_console()
+    print_header(f"Ustawienia quizu: {quiz_path.stem}")
 
-    for index, question in enumerate(questions, start=1):
-        if ask_question(question, index, len(questions)):
+    try:
+        start_from = input(f"Od którego pytania chcesz zacząć? (1-{len(questions)}, domyślnie 1): ").strip()
+        start_index = int(start_from) if start_from else 1
+        if not (1 <= start_index <= len(questions)):
+            start_index = 1
+    except ValueError:
+        start_index = 1
+
+    show_info_input = input("Czy pokazywać informację, że pytanie jest wielokrotnego wyboru? (t/n, domyślnie t): ").strip().lower()
+    show_multiple_choice_info = show_info_input != "n"
+
+    score = 0
+    active_questions = questions[start_index - 1:]
+    total_active = len(active_questions)
+
+    for i, question in enumerate(active_questions):
+        current_question_number = start_index + i
+        if ask_question(question, current_question_number, len(questions), show_multiple_choice_info):
             score += 1
 
     clear_console()
     print_header("Wynik końcowy")
 
-    percentage = round(score / len(questions) * 100)
+    percentage = round(score / total_active * 100) if total_active > 0 else 0
 
     print(f"Quiz: {quiz_path.stem}")
-    print(f"Wynik: {score}/{len(questions)}")
+    print(f"Wynik: {score}/{total_active}")
     print(f"Procent: {percentage}%")
 
     if percentage == 100:
