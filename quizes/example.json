@@ -1,0 +1,84 @@
+{
+  "pytania": [
+    {
+      "pytanie": "Które z poniższych typów danych są wbudowane w Pythona?",
+      "odpowiedzi": {
+        "1": "list",
+        "2": "ArrayList",
+        "3": "dict",
+        "4": "HashMap"
+      },
+      "poprawne_odpowiedzi": ["1", "3"]
+    },
+    {
+      "pytanie": "Które słowo kluczowe służy do definiowania funkcji w Pythonie?",
+      "odpowiedzi": {
+        "1": "func",
+        "2": "def",
+        "3": "function",
+        "4": "method"
+      },
+      "poprawne_odpowiedzi": ["2"]
+    },
+    {
+      "pytanie": "Jaki będzie wynik działania kodu: print(2 ** 3)?",
+      "odpowiedzi": {
+        "1": "6",
+        "2": "8",
+        "3": "9",
+        "4": "23"
+      },
+      "poprawne_odpowiedzi": ["2"]
+    },
+    {
+      "pytanie": "Które z poniższych wartości w Pythonie są traktowane jako False?",
+      "odpowiedzi": {
+        "1": "0",
+        "2": "[]",
+        "3": "\"tekst\"",
+        "4": "None"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "4"]
+    },
+    {
+      "pytanie": "Która metoda dodaje element na końcu listy?",
+      "odpowiedzi": {
+        "1": "add()",
+        "2": "push()",
+        "3": "append()",
+        "4": "insert_end()"
+      },
+      "poprawne_odpowiedzi": ["3"]
+    },
+    {
+      "pytanie": "Co oznacza skrót JSON?",
+      "odpowiedzi": {
+        "1": "JavaScript Object Notation",
+        "2": "Java Standard Object Naming",
+        "3": "Joined Script Object Network",
+        "4": "Java Source Open Notation"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Które z poniższych struktur są mutowalne w Pythonie?",
+      "odpowiedzi": {
+        "1": "list",
+        "2": "tuple",
+        "3": "dict",
+        "4": "set"
+      },
+      "poprawne_odpowiedzi": ["1", "3", "4"]
+    },
+    {
+      "pytanie": "Który operator służy do porównania równości wartości?",
+      "odpowiedzi": {
+        "1": "=",
+        "2": "==",
+        "3": "===",
+        "4": "!="
+      },
+      "poprawne_odpowiedzi": ["2"]
+    }
+  ]
+}
