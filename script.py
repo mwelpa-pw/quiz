@@ -2,6 +2,7 @@ import base64
 import json
 import os
 import random
+import string
 import tempfile
 import webbrowser
 from pathlib import Path
@@ -151,21 +152,16 @@ def ask_question(question, question_number, total_questions):
 
     print("\nOdpowiedzi:\n")
 
-    original_answer_items = [
-        ("1", answers.get("1", "")),
-        ("2", answers.get("2", "")),
-        ("3", answers.get("3", "")),
-        ("4", answers.get("4", "")),
-    ]
+    original_answer_items = sorted(answers.items(), key=lambda x: str(x[0]))
 
     random.shuffle(original_answer_items)
 
-    display_labels = ["a", "b", "c", "d"]
+    display_labels = list(string.ascii_lowercase[:len(original_answer_items)])
     displayed_answers = {}
 
     for label, original_answer_item in zip(display_labels, original_answer_items):
         original_key, answer_text = original_answer_item
-        displayed_answers[label] = original_key
+        displayed_answers[label] = str(original_key)
         print(f"  {label.upper()}) {answer_text}")
 
     correct_answers = {
@@ -178,14 +174,19 @@ def ask_question(question, question_number, total_questions):
 
     if is_multiple_choice:
         print("\nTo pytanie ma wiele poprawnych odpowiedzi.")
-        print("Wpisz odpowiedzi razem, np. ac albo abcd.")
+        print(f"Wpisz odpowiedzi razem, np. {''.join(display_labels[:2])} albo {''.join(display_labels)}.")
     else:
-        print("\nWpisz jedną odpowiedź: a, b, c albo d.")
+        if len(display_labels) > 0:
+            if len(display_labels) == 1:
+                 print(f"\nWpisz odpowiedź: {display_labels[0]}.")
+            else:
+                 labels_str = ", ".join(display_labels[:-1]) + " albo " + display_labels[-1]
+                 print(f"\nWpisz jedną odpowiedź: {labels_str}.")
 
     user_input = input("\nTwoja odpowiedź: ").strip().lower().replace(" ", "")
     user_answers = set(user_input)
 
-    allowed_answers = {"a", "b", "c", "d"}
+    allowed_answers = set(display_labels)
     user_answers = user_answers.intersection(allowed_answers)
 
     is_correct = user_answers == correct_answers
