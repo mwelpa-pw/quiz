@@ -17,6 +17,7 @@ Aplikacja automatycznie wyszuka pliki `.json` w folderze `quizes/` i pozwoli Ci 
 Przed rozpoczęciem quizu możesz wybrać:
 - **Od którego pytania zacząć** – przydatne, jeśli chcesz powtórzyć tylko końcówkę materiału.
 - **Czy pokazywać informację o wielokrotnym wyborze** – możesz wyłączyć tę podpowiedź, aby zwiększyć poziom trudności.
+- **Czy zapisać błędne odpowiedzi** – na koniec quizu aplikacja może wygenerować plik JSON z pytaniami, na które odpowiedziałeś błędnie (wraz z Twoimi odpowiedziami).
 
 ## Jak dodawać własne quizy? ✍️
 

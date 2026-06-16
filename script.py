@@ -196,16 +196,25 @@ def ask_question(question, question_number, total_questions, show_multiple_choic
 
     print()
 
+    error_details = None
     if is_correct:
         print("✅ Dobrze!")
     else:
         correct_text = ", ".join(sorted(answer.upper() for answer in correct_answers))
         print("❌ Źle.")
         print(f"Poprawna odpowiedź: {correct_text}")
+        
+        # Przygotowanie szczegółów błędu do zapisania
+        error_details = {
+            "pytanie": question_text,
+            "odpowiedzi": {label.upper(): answers[original_key] for label, original_key in displayed_answers.items()},
+            "poprawne_odpowiedzi": [label.upper() for label in sorted(correct_answers)],
+            "zaznaczone_odpowiedzi": [label.upper() for label in sorted(user_answers)]
+        }
 
     input("\nNaciśnij Enter, aby przejść dalej...")
 
-    return is_correct
+    return is_correct, error_details
 
 def run_quiz(quiz_path):
     try:
@@ -239,14 +248,21 @@ def run_quiz(quiz_path):
     show_info_input = input("Czy pokazywać informację, że pytanie jest wielokrotnego wyboru? (t/n, domyślnie t): ").strip().lower()
     show_multiple_choice_info = show_info_input != "n"
 
+    save_errors_input = input("Czy zapisać błędne odpowiedzi do pliku na koniec? (t/n, domyślnie n): ").strip().lower()
+    save_errors = save_errors_input == "t"
+
     score = 0
+    incorrect_questions = []
     active_questions = questions[start_index - 1:]
     total_active = len(active_questions)
 
     for i, question in enumerate(active_questions):
         current_question_number = start_index + i
-        if ask_question(question, current_question_number, len(questions), show_multiple_choice_info):
+        is_correct, error_info = ask_question(question, current_question_number, len(questions), show_multiple_choice_info)
+        if is_correct:
             score += 1
+        elif error_info:
+            incorrect_questions.append(error_info)
 
     clear_console()
     print_header("Wynik końcowy")
@@ -256,6 +272,16 @@ def run_quiz(quiz_path):
     print(f"Quiz: {quiz_path.stem}")
     print(f"Wynik: {score}/{total_active}")
     print(f"Procent: {percentage}%")
+
+    if save_errors and incorrect_questions:
+        error_file_name = f"errors_{quiz_path.stem}_{random.randint(1000, 9999)}.json"
+        error_file_path = QUIZ_FOLDER / error_file_name
+        try:
+            with open(error_file_path, "w", encoding="utf-8") as f:
+                json.dump({"pytania": incorrect_questions}, f, indent=2, ensure_ascii=False)
+            print(f"\n💾 Zapisano błędne odpowiedzi do pliku: {error_file_name}")
+        except Exception as e:
+            print(f"\n⚠️ Nie udało się zapisać błędów: {e}")
 
     if percentage == 100:
         print("\n🏆 Perfekcyjnie!")
