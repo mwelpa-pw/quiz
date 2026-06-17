@@ -1,0 +1,420 @@
+{
+  "pytania": [
+    {
+      "pytanie": "Programista chce pozyskać kolejną unikalną wartość do wstawienia w kolumnie klucza głównego. Możliwe rozwiązania to:",
+      "odpowiedzi": {
+        "1": "Wyliczenie wartości maksymalnej obecnej w kolumnie poprzez zapytanie SQL SELECT i na tej podstawie wyznaczenie kolejnej wartości do umieszczenia w nowym rekordzie",
+        "2": "Zastosowanie cechy identity dla danej kolumny",
+        "3": "Zastosowanie obiektu sequencer",
+        "4": "Zastosowanie dedykowanej tabeli na potrzeby wsparcia procesu pozyskiwania kolejnych wartości"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Logiczny model danych:",
+      "odpowiedzi": {
+        "1": "zawiera typowo liczbę encji wyższą niż liczba pojęć obecnych w modelu pojęciowym",
+        "2": "jest niezależny od technologii stosowanej do realizacji systemu baz danych np. użycia Ms SQL Server lub Oracle Database",
+        "3": "zawiera m.in. definicje indeksów",
+        "4": "zawiera m.in. definicje encji, atrybutów i kluczy głównych",
+        "5": "zawiera m.in. definicje kluczy obcych"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Systemy NoSQL to typowo:",
+      "odpowiedzi": {
+        "1": "systemy relacyjne",
+        "2": "systemy bazujące na formalnej teorii NoSQL, stanowiącej rozwinięcie teorii systemów relacyjnych",
+        "3": "systemy rozwijane w latach siedemdziesiątych XX wieku, przed sformułowaniem założeń języka SQL, obecnie ponownie podlegające intensywnemu rozwojowi",
+        "4": "systemy bazujące na matematycznej teorii NoSQL, stanowiącej zanegowanie teorii systemów relacyjnych",
+        "5": "systemy nierelacyjne",
+        "6": "systemy typu open source",
+        "7": "systemy rozwijane w XXI wieku"
+      },
+      "poprawne_odpowiedzi": [
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Indeks:",
+      "odpowiedzi": {
+        "1": "powinien zostać utworzony zawsze dla klucza głównego (ewentualnie może być tworzony automatycznie przez system)",
+        "2": "powinien zostać utworzony zawsze na kolumnach przyjmujących jedną z trzech wartości",
+        "3": "może przyspieszać realizację zapytań do bazy danych",
+        "4": "może przyspieszać realizację poleceń SQL UPDATE",
+        "5": "może spowalniać realizację poleceń SQL UPDATE"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Twierdzenie CAP:",
+      "odpowiedzi": {
+        "1": "Dotyczy możliwości jednoczesnego zapewnienia m.in. spójności i przenośności",
+        "2": "Dotyczy możliwości jednoczesnego zapewnienia m.in. spójności i odporności na partycjonowanie",
+        "3": "w praktyce wymusza podjęcie decyzji czy priorytetem dla danego wdrożenia jest jedno z dwóch typowych rozwiązań: system CP lub system AP",
+        "4": "w praktyce wymusza podjęcie decyzji czy priorytetem dla danego wdrożenia jest jedno z dwóch typowych rozwiązań: system AP lub system CA",
+        "5": "Dotyczy systemów rozproszonych i może być odniesiona np. do Apache Cassandra",
+        "6": "Dotyczy pojedynczej instancji DBMS np. Oracle Database"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Projektant tabeli PRACOWNICY umieścił w niej kolumny ID_OSOBY (klucz główny, sekwencyjnie nadawana wartość ze zbioru liczb naturalnych), OSOBA (kolumna tekstowa, w której umieszczane jest imię i nazwisko osoby), data_urodzenia (kolumna typu data), PESEL (nr PESEL osoby). Tabela taka:",
+      "odpowiedzi": {
+        "1": "spełnia wymogi pierwszej postaci normalnej",
+        "2": "spełnia wymogi drugiej postaci normalnej",
+        "3": "spełnia wymogi trzeciej postaci normalnej",
+        "4": "zawiera zastępczy klucz główny",
+        "5": "zawiera klucz obcy"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Użycie komponentów .NET i JDBC do dostępu do bazy danych umożliwia:",
+      "odpowiedzi": {
+        "1": "wykonywanie transakcji",
+        "2": "wykonywanie parametryzowanych zapytań SQL",
+        "3": "nawiązywanie połączeń z bazą danych",
+        "4": "wyłącznie wykonywanie zapytań SQL SELECT"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Pod pojęciem rozwiązań NoSQL rozumiane są m.in. systemy utrzymujące zasoby danych w postaci:",
+      "odpowiedzi": {
+        "1": "dokumentów np. JSON",
+        "2": "grafów",
+        "3": "rekordami opisanych kolumnami, w tym kluczami obcymi, których poprawność jest weryfikowana przy każdym zapisie przez system",
+        "4": "wierszy opisanych kolumnami, potencjalnie różnymi w każdym wierszu"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja tabeli do pierwszej postaci normalnej:",
+      "odpowiedzi": {
+        "1": "jest procesem o charakterze teoretycznym, pomijanym w praktycznych zastosowaniach",
+        "2": "wymaga m.in. identyfikacji klucza głównego",
+        "3": "zawsze wymaga identyfikacji klucza obcego w tej tabeli",
+        "4": "dopuszcza wartości nieatomowe w kolumnach tabeli",
+        "5": "nie pozwala na zależność wartości kolumny od innych kolumn nie wchodzących w skład klucza głównego",
+        "6": "wymaga m.in. identyfikacji klucza potencjalnego"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "6"
+      ]
+    },
+    {
+      "pytanie": "Do systemów składujących dane w postaci dokumentów należą:",
+      "odpowiedzi": {
+        "1": "Apache Cassandra",
+        "2": "Redis",
+        "3": "Neo4j",
+        "4": "MongoDB"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Sposobem na uzyskanie zakleszczenia (ang. deadlock) jest:",
+      "odpowiedzi": {
+        "1": "użycie dowolnych kilku transakcji",
+        "2": "użycie wyłącznie trzech transakcji, pomiędzy którymi istnieje zależność cykliczna; większa liczba transakcji nie spowoduje nigdy zakleszczenia",
+        "3": "rezygnacja z izolacji transakcji",
+        "4": "użycie transakcji, pomiędzy którymi istnieje zależność cykliczna"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Analityk musi dysponować możliwością odczytu danych wielu tabel bazy danych Oracle. W celu zwiększenia poziomu bezpieczeństwa:",
+      "odpowiedzi": {
+        "1": "Należy założyć, iż analityk nie nadużywa swoich uprawnień",
+        "2": "Należy wykorzystać mechanizmy audytu, gdyż umożliwią one m.in. monitorowanie wykonania zapytań SQL SELECT",
+        "3": "Należy wykorzystać mechanizmy audytu, gdyż umożliwią one m.in. monitorowanie wykonania zapytań SQL SELECT, ale nie jest możliwe selektywne monitorowanie odczytu danych wyłącznie z wybranych kolumn",
+        "4": "Wskazane jest wykorzystanie profili, gdyż umożliwią one pośrednio podniesienie poziomu ochrony danych",
+        "5": "Należy wykorzystać mechanizmy audytu, gdyż umożliwią one m.in. monitorowanie operacji eksportu danych"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Dane obiektu warstwy wektorowej np. obiektu punktowego przystanku autobusowego:",
+      "odpowiedzi": {
+        "1": "mogą zawierać współrzędne tego obiektu, ale nie jest to konieczne",
+        "2": "zawierają zawsze współrzędne wyrażone w jednym wspólnym dla systemów GIS układzie współrzędnych",
+        "3": "zawierają zawsze współrzędne wyrażone w przyjętym dla warstwy układzie współrzędnych, przy czym w systemach GIS stosowanych jest wiele układów współrzędnych również na terenie tego samego kraju, ale układy te bazują zawsze na tym samym przybliżeniu kształtu kuli ziemskiej",
+        "4": "mogą być eksportowane z wykorzystaniem usług w standardzie WFS"
+      },
+      "poprawne_odpowiedzi": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Przedsiębiorstwo zamierza umożliwić tworzenie przekrojowych analiz z jednoczesnym użyciem danych z różnych baz danych przedsiębiorstwa – np. obsługi produkcji, reklamacji i sprzedaży, wykorzystujących różne systemy DBMS. Zalecane rozwiązanie to:",
+      "odpowiedzi": {
+        "1": "realizacja analiz na podstawie danych hurtowni danych będącej sumą struktur tabel, zawierających dane konieczne dla celów analitycznych i już obecnych w bazach źródłowych",
+        "2": "realizacja analiz poprzez pobieranie danych wprost ze źródłowych baz danych",
+        "3": "realizacja analiz na podstawie danych hurtowni danych wykorzystującej zmodyfikowane struktury tabel zawierających dane konieczne dla celów analitycznych i już obecnych w bazach źródłowych",
+        "4": "zastosowanie platform NoSQL typu kolumnowego, bazujących na klastrze w celu zapewnienia sprawnej obsługi złożonych zapytań"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Dwufazowy protokół potwierdzeń:",
+      "odpowiedzi": {
+        "1": "może być stosowany np. w powiązaniu z Ms SQL Server",
+        "2": "jest typowo stosowany w klastrowych systemach składowania danych wielkiej skali (ang. Big Data)",
+        "3": "jest szeroko stosowany do wykonywania transakcji wprowadzających zmiany w wielu rekordach - szczególnie w systemach NoSQL typu kolumnowego",
+        "4": "zapewnia możliwość realizacji transakcji rozproszonych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Warstwy rastrowe:",
+      "odpowiedzi": {
+        "1": "występują w systemach klasy GIS",
+        "2": "ułatwiają wykonywanie zapytań przestrzennych",
+        "3": "zastępują obecnie warstwy wektorowe; warstwy wektorowe ze względu na swoje ograniczenia są tworzone na podstawie tradycyjnych map przedsiębiorstwa zamiast warstw rastrowych tylko w celu ograniczenia kosztów projektu"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Warstwy w systemach informacji przestrzennej dzielimy na:",
+      "odpowiedzi": {
+        "1": "Rastrowe",
+        "2": "Faktów",
+        "3": "NoSQL",
+        "4": "Wektorowe",
+        "5": "Długotrwałe transakcyjne"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "System umożliwia tworzenie rekordów faktów. System taki to:",
+      "odpowiedzi": {
+        "1": "system NoSQL typu kolumnowego",
+        "2": "system relacyjnej hurtowni danych",
+        "3": "system GIS",
+        "4": "MongoDB"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "System Apache Hadoop stosowany bez jednoczesnego użycia innych systemów np. takich jak NoSQL służy do:",
+      "odpowiedzi": {
+        "1": "zapisywania danych w postaci tabel, a lista kolumn może być różna w każdym rekordzie",
+        "2": "zapisywania danych w postaci tabel, a lista kolumn jest identyczna w każdym rekordzie",
+        "3": "zapisywania danych, w których wykorzystywane są klucze obce, a system Apache Hadoop zapewnia spójność referencyjną",
+        "4": "zapisywania danych w postaci plików składowanych w klastrze",
+        "5": "zapisywania danych w postaci plików składowanych na pojedynczym serwerze"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W przypadku pomyślnego wykonania polecenia COMMIT kończącego transakcję A i zawierającego dwa polecenia INSERT SQL i trzy polecenia UPDATE SQL:",
+      "odpowiedzi": {
+        "1": "Mamy gwarancję, iż pomyślnie wykonane zostały wszystkie operacje wstawienia rekordów",
+        "2": "Mamy gwarancję, iż pomyślnie wykonane zostały wszystkie operacje modyfikacji rekordów",
+        "3": "Mamy gwarancję, iż zachowana została unikalność wartości kluczy głównych",
+        "4": "Mamy gwarancję, iż żadna z innych transakcji nie została wycofana w wyniku realizacji transakcji A",
+        "5": "Mamy gwarancję, iż zachowana została spójność referencyjna"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Należy przygotować kod wsadowego przetworzenia bazy danych polegającego na okresowym (raz na dobę) wyznaczeniu i zapisie do tej bazy danych dochodu generowanego przez sprzedaż poszczególnych produktów. Rozwiązanie ma być maksymalnie wydajne i wykonywane w godzinach nocnych. Należy:",
+      "odpowiedzi": {
+        "1": "użyć wyzwalaczy",
+        "2": "użyć procedur składowanych",
+        "3": "wdrożyć hurtownię danych – zadaniem hurtowni danych jest utrzymanie wiernej kopii danych różnych baz danych i ich przetwarzanie w celu zwrotnego eksportu wyników do tych baz danych",
+        "4": "użyć kodu zaimplementowanego w aplikacji klienckiej, w celu przeniesienia części przetwarzania do aplikacji opracowanej w technologii tzw. grubego klienta i dzięki temu poprawienia wydajności systemu"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Administrator systemu baz danych musi dysponować możliwością odczytu danych wszystkich tabel bazy danych Oracle. W związku z tym:",
+      "odpowiedzi": {
+        "1": "Należy założyć, iż administrator nie nadużywa swoich uprawnień, gdyż jest osobą szczególnego zaufania i nie istnieją mechanizmy dedykowane dla takiej sytuacji",
+        "2": "Należy wykorzystać mechanizmy audytu",
+        "3": "Należy wykorzystać mechanizmy transakcyjnej replikacji danych w celu ograniczenia ryzyka nieuzasadnionego odczytu danych",
+        "4": "Należy regularnie wykonywać pełne kopie bezpieczeństwa"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Relacja wiele do wielu pomiędzy tabelą A i B jest reprezentowana poprzez:",
+      "odpowiedzi": {
+        "1": "Dodatkowe klucze obce w tabelach A i B",
+        "2": "Dodatkowy klucz obcy w tabeli A wskazujący na tabelę B",
+        "3": "Dodatkowy klucz obcy w tabeli B wskazujący na tabelę A",
+        "4": "Dodatkową tabelę C bez kluczy obcych",
+        "5": "Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B",
+        "6": "Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B i klucze obce w tabelach A i B",
+        "7": "Dodatkową tabelę C bez kluczy obcych i klucze obce w tabelach A i B"
+      },
+      "poprawne_odpowiedzi": [
+        "5"
+      ]
+    },
+    {
+      "pytanie": "W sytuacji, gdy nie może być zapewnione stabilne łącze sieciowe pomiędzy aplikacją a dwoma serwerami baz danych i konieczne jest nanoszenie tych samych zmian w obu serwerach baz danych, zalecane jest:",
+      "odpowiedzi": {
+        "1": "Wykonywanie dwóch transakcji przez aplikację kliencką - po jednej na każdym serwerze bazy danych",
+        "2": "Wykonywanie zmian z wykorzystaniem transakcji rozproszonej modyfikującej każdą z baz danych",
+        "3": "Wykorzystanie dwóch klastrów serwerów działających w trybie hot-failover zamiast jednego klastra",
+        "4": "Wykorzystanie mechanizmów replikacji"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Stworzono warstwę wektorową typu wielobok. Obiekt tej warstwy jest definiowany poprzez:",
+      "odpowiedzi": {
+        "1": "Lokalizację zdefiniowaną w wybranym układzie współrzędnych, opisaną przez współrzędne wierzchołków",
+        "2": "Atrybuty opisowe",
+        "3": "Lokalizację zdefiniowaną zawsze w tym samym, wspólnym dla wszystkich systemów GIS, układzie współrzędnych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W systemie Apache HBase:",
+      "odpowiedzi": {
+        "1": "typy danych dla poszczególnych kolumn nie są deklarowane a priori",
+        "2": "lista kolumn może być różna w każdym rekordzie",
+        "3": "lista kolumn jest identyczna w każdym rekordzie",
+        "4": "dane zawarte w kolumnie mogą być różnych typów w poszczególnych rekordach",
+        "5": "wykorzystywane są klucze obce i inne rozwiązania zaczerpnięte z relacyjnych baz danych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Pula połączeń to sposób na:",
+      "odpowiedzi": {
+        "1": "obniżenie obciążenia serwera otwieraniem i zamykaniem połączeń",
+        "2": "poprawę wydajności aplikacji",
+        "3": "zmniejszenie liczby zapytań SQL przesyłanych przez jedno połączenie",
+        "4": "rezygnację ze stosowania zapytań SQL w odwołaniach do bazy danych",
+        "5": "rezygnację z konieczności wykorzystania przyrostowych kopii bezpieczeństwa"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Wdrożenia rozwiązań określanych jako big data odznaczają się zazwyczaj wykorzystaniem danych:",
+      "odpowiedzi": {
+        "1": "o znacznej wielkości mierzonej np. w liczbie bajtów",
+        "2": "o wyższej jakości niż w relacyjnych bazach danych",
+        "3": "o niższej jakości niż w relacyjnych bazach danych",
+        "4": "składowanych wyłącznie w postaci tabel definiowanych a priori w tzw. trybie schema-on-write",
+        "5": "o różnorodnej postaci, w tym np. wpisów na forach internetowych, czy też logów opisujących zachowania użytkowników w aplikacjach WWW"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "W celu składowania danych w platformie Apache Hadoop przy założeniu użycia wyłącznie tej platformy (tzn. bez jednoczesnego użycia np. platform NoSQL) konieczne jest:",
+      "odpowiedzi": {
+        "1": "Określenie struktury tabeli, w której będą zapisywane dane z podaniem nazw kolumn i typów danych dla tych kolumn",
+        "2": "Określenie nazwy i ścieżki dostępu do pliku, do którego mają być zapisywane dane",
+        "3": "Wybranie formatu pliku, do którego mają być zapisywane dane, gdyż nie jest on narzucany przez Apache Hadoop",
+        "4": "Określenie tylko nazwy tabeli i nazw rodzin kolumn, w których będą zapisywane dane bez podawania nazw kolumn i typów tych kolumn"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja tabeli do drugiej postaci normalnej:",
+      "odpowiedzi": {
+        "1": "Jest procesem o charakterze teoretycznym, pomijanym w praktycznych zastosowaniach",
+        "2": "Wymaga m.in. identyfikacji klucza głównego",
+        "3": "Zawsze wymaga identyfikacji klucza obcego w tej tabeli",
+        "4": "Dopuszcza wartości nieatomowe w kolumnach tabeli",
+        "5": "Wymaga wcześniejszego uzyskania pierwszej postaci normalnej",
+        "6": "Ma na celu m.in. wyeliminowanie anomalii wynikających z redundancji w bazie danych",
+        "7": "Może powodować zbędne tworzenie dodatkowych tabel",
+        "8": "w przypadku, gdy klucz główny nie jest kluczem złożonym nie wprowadza żadnych zmian w definicji tabeli w stosunku do definicji tabeli spełniającej wymogi pierwszej postaci normalnej"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ]
+}
