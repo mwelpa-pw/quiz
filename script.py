@@ -209,12 +209,28 @@ def ask_question(question, question_number, total_questions, show_multiple_choic
             "pytanie": question_text,
             "odpowiedzi": {label.upper(): answers[original_key] for label, original_key in displayed_answers.items()},
             "poprawne_odpowiedzi": [label.upper() for label in sorted(correct_answers)],
-            "zaznaczone_odpowiedzi": [label.upper() for label in sorted(user_answers)]
+            "zaznaczone_odpowiedzi": [label.upper() for label in sorted(user_answers)],
+            "dana_odpowiedz": "".join(sorted(user_answers)).upper()
         }
 
     input("\nNaciśnij Enter, aby przejść dalej...")
 
     return is_correct, error_details
+
+def save_error_list(quiz_path, error_list):
+    if not error_list:
+        return None
+        
+    error_file_name = f"errors_{quiz_path.stem}_{random.randint(1000, 9999)}.json"
+    error_file_path = QUIZ_FOLDER / error_file_name
+    try:
+        with open(error_file_path, "w", encoding="utf-8") as f:
+            json.dump({"pytania": error_list}, f, indent=2, ensure_ascii=False)
+        return error_file_name
+    except Exception as e:
+        print(f"\n⚠️ Nie udało się zapisać błędów: {e}")
+        return None
+
 
 def run_quiz(quiz_path):
     try:
@@ -252,7 +268,8 @@ def run_quiz(quiz_path):
     save_errors = save_errors_input == "t"
 
     score = 0
-    incorrect_questions = []
+    incorrect_questions_for_file = []
+    questions_to_review = []
     active_questions = questions[start_index - 1:]
     total_active = len(active_questions)
 
@@ -261,8 +278,10 @@ def run_quiz(quiz_path):
         is_correct, error_info = ask_question(question, current_question_number, len(questions), show_multiple_choice_info)
         if is_correct:
             score += 1
-        elif error_info:
-            incorrect_questions.append(error_info)
+        else:
+            questions_to_review.append(question)
+            if error_info:
+                incorrect_questions_for_file.append(error_info)
 
     clear_console()
     print_header("Wynik końcowy")
@@ -273,39 +292,84 @@ def run_quiz(quiz_path):
     print(f"Wynik: {score}/{total_active}")
     print(f"Procent: {percentage}%")
 
-    if save_errors and incorrect_questions:
-        error_file_name = f"errors_{quiz_path.stem}_{random.randint(1000, 9999)}.json"
-        error_file_path = QUIZ_FOLDER / error_file_name
-        try:
-            with open(error_file_path, "w", encoding="utf-8") as f:
-                json.dump({"pytania": incorrect_questions}, f, indent=2, ensure_ascii=False)
-            print(f"\n💾 Zapisano błędne odpowiedzi do pliku: {error_file_name}")
-        except Exception as e:
-            print(f"\n⚠️ Nie udało się zapisać błędów: {e}")
+    if save_errors and incorrect_questions_for_file:
+        saved_file = save_error_list(quiz_path, incorrect_questions_for_file)
+        if saved_file:
+            print(f"\n💾 Zapisano błędne odpowiedzi do pliku: {saved_file}")
 
-    if percentage == 100:
-        print("\n🏆 Perfekcyjnie!")
+    if percentage >= 90:
+        print("\n🏆 5")
     elif percentage >= 70:
-        print("\n🎉 Bardzo dobrze!")
+        print("\n🎉 Bardzo dobrze! - 4")
     elif percentage >= 50:
-        print("\n🙂 Nieźle, ale można lepiej.")
+        print("\n🙂 Nieźle, ale można lepiej. - 3")
     else:
-        print("\n📚 Warto jeszcze poćwiczyć.")
+        print("\n📚 Nie zdales.")
+
+    if questions_to_review:
+        print(f"\nMasz {len(questions_to_review)} błędnych odpowiedzi.")
+        study_mode = input("Czy chcesz uruchomić tryb nauki (powtarzanie błędnych pytań do skutku)? (t/n, domyślnie n): ").strip().lower()
+        
+        if study_mode == "t":
+            round_num = 1
+            while questions_to_review:
+                current_round_questions = list(questions_to_review)
+                questions_to_review = []
+                current_round_errors_for_file = []
+                
+                for i, question in enumerate(current_round_questions, 1):
+                    clear_console()
+                    print_header(f"Tryb nauki (Runda {round_num}) - Pozostało: {len(current_round_questions) - i + 1}")
+                    is_correct, error_info = ask_question(question, i, len(current_round_questions), show_multiple_choice_info)
+                    
+                    if not is_correct:
+                        questions_to_review.append(question)
+                        if error_info:
+                            current_round_errors_for_file.append(error_info)
+                
+                if save_errors and current_round_errors_for_file:
+                    saved_file = save_error_list(quiz_path, current_round_errors_for_file)
+                    if saved_file:
+                        print(f"💾 [Runda {round_num}] Zapisano nowe błędy do pliku: {saved_file}")
+                
+                if questions_to_review:
+                    eliminated = len(current_round_questions) - len(questions_to_review)
+                    print(f"\nKoniec rundy {round_num}. Udało Ci się wyeliminować {eliminated} pytań.")
+                    input("Naciśnij Enter, aby zacząć kolejną rundę...")
+                
+                round_num += 1
+            
+            clear_console()
+            print_header("Tryb nauki zakończony!")
+            print("Wszystkie pytania zostały rozwiązane poprawnie. Brawo!")
 
     input("\nNaciśnij Enter, aby wrócić do menu...")
 
 
 def main():
-    while True:
-        quiz_files = load_quiz_files()
-        selected_quiz = choose_quiz(quiz_files)
+    # Upewnij się, że folder na quizy istnieje
+    if not QUIZ_FOLDER.exists():
+        QUIZ_FOLDER.mkdir(parents=True, exist_ok=True)
+        print(f"Utworzono folder na quizy: {QUIZ_FOLDER}")
+        print("Wrzuć tam pliki .json, aby móc z nich korzystać.")
+        input("\nNaciśnij Enter, aby kontynuować...")
 
-        if selected_quiz is None:
-            clear_console()
-            print("Do zobaczenia!")
-            break
+    try:
+        while True:
+            quiz_files = load_quiz_files()
+            selected_quiz = choose_quiz(quiz_files)
 
-        run_quiz(selected_quiz)
+            if selected_quiz is None:
+                clear_console()
+                print("Do zobaczenia!")
+                break
+
+            run_quiz(selected_quiz)
+    except KeyboardInterrupt:
+        print("\n\nPrzerwano przez użytkownika. Do zobaczenia!")
+    except Exception as e:
+        print(f"\n\nWystąpił nieoczekiwany błąd: {e}")
+        input("\nNaciśnij Enter, aby zakończyć...")
 
 
 if __name__ == "__main__":

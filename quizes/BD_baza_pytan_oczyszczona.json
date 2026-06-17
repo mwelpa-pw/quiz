@@ -1,0 +1,816 @@
+{
+  "pytania": [
+    {
+      "pytanie": "Opcje audytu bazy danych Oracle umożliwiają:",
+      "odpowiedzi": {
+        "1": "Monitorowanie wykorzystania poszczególnych poleceń SQL",
+        "2": "Monitorowanie udanych prób połączenia z instancją",
+        "3": "Monitorowanie nieudanych prób połączenia z instancją",
+        "4": "Są rozwiązaniem, które powinno być stosowane zamiast definiowania uprawnień do tabel",
+        "5": "Są rozwiązaniem stosowanym równolegle z nadawaniem uprawnień do tabel"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Z punktu widzenia wydajności przetwarzania danych przez wielu użytkowników (np. MS SQL):",
+      "odpowiedzi": {
+        "1": "Wskazane są liczne transakcje o krótkim czasie realizacji",
+        "2": "Wskazana jest niewielka liczba transakcji o czasie rzędu dziesiątek minut",
+        "3": "W operacjach finansowo-księgowych zaleca się rezygnację z transakcji"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Pula połączeń (Connection pooling) to sposób na:",
+      "odpowiedzi": {
+        "1": "Obniżenie obciążenia serwera otwieraniem i zamykaniem połączeń",
+        "2": "Poprawę wydajności aplikacji",
+        "3": "Zmniejszenie liczby zapytań SQL przesyłanych przez jedno połączenie",
+        "4": "Rezygnację ze stosowania zapytań SQL",
+        "5": "Rezygnację z przyrostowych kopii bezpieczeństwa"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Twierdzenie CAP dotyczy:",
+      "odpowiedzi": {
+        "1": "Jednoczesnego zapewnienia spójności i przenośności",
+        "2": "Jednoczesnego zapewnienia spójności i odporności na partycjonowanie",
+        "3": "Jednoczesnego zapewnienia spójności i dostępności",
+        "4": "Systemów rozproszonych (np. Apache Cassandra)",
+        "5": "Pojedynczej instancji DBMS (np. Oracle Database)"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Polecenie SHUTDOWN ABORT:",
+      "odpowiedzi": {
+        "1": "Może uszkodzić dane",
+        "2": "Jest zalecane, gdy chcemy zapewnić możliwość zakończenia pracy użytkowników",
+        "3": "Nie jest zalecane, gdy chcemy zapewnić możliwość zakończenia pracy użytkowników",
+        "4": "Może powodować wydłużone oczekiwanie na zakończenie pracy instancji",
+        "5": "Może powodować wydłużone oczekiwanie na kolejne uruchomienie instancji"
+      },
+      "poprawne_odpowiedzi": [
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Poziom izolacji READ UNCOMMITTED:",
+      "odpowiedzi": {
+        "1": "Występuje ryzyko brudnych odczytów",
+        "2": "Występuje ryzyko zakleszczeń",
+        "3": "Występuje ryzyko niepowtarzalnych odczytów",
+        "4": "Modyfikowane rekordy są blokowane"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Wdrożenia Big Data charakteryzują się zazwyczaj:",
+      "odpowiedzi": {
+        "1": "Znaczną wielkością danych",
+        "2": "Różnorodną postacią danych (logi, fora, WWW)",
+        "3": "Wyższą jakością danych niż w relacyjnych bazach",
+        "4": "Niższą jakością danych niż w relacyjnych bazach",
+        "5": "Składowaniem wyłącznie w postaci tabel (schema-on-write)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Trigger (wyzwalacz) może:",
+      "odpowiedzi": {
+        "1": "Być uruchamiany po poleceniu SELECT",
+        "2": "Wykonywać polecenie UPDATE na innej tabeli",
+        "3": "Być wywołany ręcznie przez EXEC TRIGGER",
+        "4": "Być wykonywany w efekcie modyfikacji danych (INSERT, UPDATE, DELETE)",
+        "5": "Być uruchamiany automatycznie po wstawieniu rekordu",
+        "6": "Być uruchamiany automatycznie zamiast wstawienia rekordu (INSTEAD OF)"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "pytanie": "W przypadku wykonania polecenia ROLLBACK:",
+      "odpowiedzi": {
+        "1": "Wycofane zostaną zmiany DML (INSERT, UPDATE, DELETE) objęte transakcją",
+        "2": "Wycofane zostaną zmiany z zakleszczonych transakcji",
+        "3": "Potwierdzone zostaną zmiany w kluczach obcych"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja do 3NF:",
+      "odpowiedzi": {
+        "1": "Eliminuje zależności przechodnie",
+        "2": "Eliminuje anomalie wynikające z redundancji",
+        "3": "Może powodować tworzenie dodatkowych tabel",
+        "4": "Dopuszcza wartości nieatomowe",
+        "5": "Może być pominięta w hurtowniach danych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Transakcja oczekująca na zwolnienie blokady:",
+      "odpowiedzi": {
+        "1": "Musi zostać zawsze przerwana przez DBA",
+        "2": "To stan normalny (blokowanie), o ile czas oczekiwania jest akceptowalny",
+        "3": "To zawsze zakleszczenie (deadlock)",
+        "4": "Należy unikać poprzez przeprojektowanie struktury tabel"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Rezultat porównania z NULL (np. 'abc' = NULL):",
+      "odpowiedzi": {
+        "1": "TRUE",
+        "2": "FALSE",
+        "3": "NULL (nieznane)"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Gruby klient na 500 stacjach komunikujący się bezpośrednio z serwerem Oracle – zalecane:",
+      "odpowiedzi": {
+        "1": "Dedykowane procesy serwera",
+        "2": "Pula połączeń",
+        "3": "Dzielone procesy serwera (Shared Server)",
+        "4": "Rezygnacja z poleceń SQL"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W bazach danych Oracle:",
+      "odpowiedzi": {
+        "1": "Zapis do redo log następuje przed potwierdzeniem aplikacji o zakończeniu transakcji",
+        "2": "Wyłączenie zasilania skutkuje utratą zmian zakończonych transakcji",
+        "3": "Wyłączenie zasilania skutkuje utratą zmian w trakcie realizacji",
+        "4": "Wyłączenie zasilania gwarantuje brak utraty danych zakończonych i w trakcie realizacji"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Tabela w trzeciej postaci normalnej (3NF):",
+      "odpowiedzi": {
+        "1": "Zawiera klucz główny",
+        "2": "Może zawierać wartości nieatomowe",
+        "3": "Nie zawiera zależności przechodnich",
+        "4": "Może zawierać klucz złożony",
+        "5": "Jest zawsze w drugiej postaci normalnej (2NF)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Big Data to zazwyczaj:",
+      "odpowiedzi": {
+        "1": "Podejście schema-on-write",
+        "2": "Podejście schema-on-read",
+        "3": "Dane modelowane przed zapisem",
+        "4": "Dane często przechowywane w Apache Hadoop",
+        "5": "Relacyjne bazy danych"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Pliki logów transakcyjnych:",
+      "odpowiedzi": {
+        "1": "Są konieczne do działania systemu",
+        "2": "Są opcjonalne",
+        "3": "Mogą podlegać archiwizacji",
+        "4": "Są wykorzystywane podczas odtwarzania bazy po awarii"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Polecenia CREATE TABLE:",
+      "odpowiedzi": {
+        "1": "Są identyczne w każdym systemie RDBMS",
+        "2": "Mogą mieć różną postać w zależności od systemu",
+        "3": "Mogą być stosowane do modyfikacji struktury tabeli"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja do drugiej postaci normalnej (2NF):",
+      "odpowiedzi": {
+        "1": "Jest procesem teoretycznym, pomijanym w praktyce",
+        "2": "Wymaga identyfikacji klucza głównego",
+        "3": "Wymaga identyfikacji klucza obcego",
+        "4": "Dopuszcza wartości nieatomowe",
+        "5": "Wymaga wcześniejszego uzyskania 1NF"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Mapowanie obiektowo-relacyjne (O/RM):",
+      "odpowiedzi": {
+        "1": "Stosowane w obiektowych bazach danych",
+        "2": "Może ograniczyć ilość tworzonego kodu SQL",
+        "3": "Całkowicie eliminuje konieczność tworzenia kodu SQL",
+        "4": "Jest wygodne, ale może obniżać wydajność"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Rozwiązania NoSQL obejmują:",
+      "odpowiedzi": {
+        "1": "Dokumenty (np. JSON/MongoDB)",
+        "2": "Grafy (np. Neo4j)",
+        "3": "Wiersze z dynamicznymi kolumnami (np. Cassandra)",
+        "4": "Tabele z wymuszoną integralnością referencyjną przy każdym zapisie"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Jeśli kolumna używana w triggerze zostanie usunięta:",
+      "odpowiedzi": {
+        "1": "Operacje INSERT mogą przestać działać",
+        "2": "Operacje SELECT mogą przestać działać",
+        "3": "Operacje DELETE mogą przestać działać",
+        "4": "Operacje UPDATE mogą przestać działać"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W bazie Oracle, odtwarzanie po awarii pliku danych wymaga:",
+      "odpowiedzi": {
+        "1": "Kopii bezpieczeństwa (backupu)",
+        "2": "Plików redo log (online)",
+        "3": "Plików archive log"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W MS SQL Server w trybie READ COMMITTED:",
+      "odpowiedzi": {
+        "1": "Ryzyko brudnych odczytów (dirty reads)",
+        "2": "Ryzyko niepowtarzalnych odczytów (non-repeatable read)"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Hurtownia danych (Data Warehouse):",
+      "odpowiedzi": {
+        "1": "Zawiera zazwyczaj dane z wielu baz (integracja)",
+        "2": "Zawiera dane historyczne (dłuższe okresy niż OLTP)",
+        "3": "Ma wyższą jakość danych niż surowe zasoby Big Data"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Jak najlepiej zapewnić unikalność klucza głównego (int)?",
+      "odpowiedzi": {
+        "1": "Ręczne sprawdzanie MAX(id) + 1",
+        "2": "Dodatkowa tabela numeratorów",
+        "3": "Mechanizm IDENTITY"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "(Pytanie 43) System NoSQL to typowo:",
+      "odpowiedzi": {
+        "1": "Systemy rozwijane w XXI wieku",
+        "2": "Systemy typu open source",
+        "3": "Systemy relacyjne",
+        "4": "Systemy rozwijane w latach 70. XX wieku"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "(Pytanie 44) Połączenia sieciowe z instancją Oracle:",
+      "odpowiedzi": {
+        "1": "Bazują zawsze na TCP/IP",
+        "2": "Mogą zapewniać automatyczną próbę połączenia (failover) w razie awarii",
+        "3": "Mogą bazować na plikach konfiguracyjnych (np. tnsnames.ora) z load balancing"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "(Pytanie 49) Fizyczna alokacja danych w Oracle:",
+      "odpowiedzi": {
+        "1": "Przestrzenie tabel (tablespaces), a te z plików z danymi (datafiles)",
+        "2": "Pliki z danymi (datafiles), a te z przestrzeni tabel",
+        "3": "Segmenty"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "(Pytanie 50) Tabela z listami wartości (przecinek) w kolumnie:",
+      "odpowiedzi": {
+        "1": "Jest w 1NF",
+        "2": "Jest w 2NF",
+        "3": "Jest w 3NF",
+        "4": "Nie jest znormalizowana"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "(Pytanie 51) Liczba wierszy w zapytaniu (JOIN ON 7=3 OR 7>1):",
+      "odpowiedzi": {
+        "1": "Zero",
+        "2": "Suma rekordów",
+        "3": "Iloczyn rekordów"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "(Pytanie 54) Klaster cold-failover:",
+      "odpowiedzi": {
+        "1": "Przed awarią pracuje jeden serwer",
+        "2": "Przed awarią pracują wszystkie serwery"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Wydajność często wykonywanych zapytań SELECT:",
+      "odpowiedzi": {
+        "1": "Dodanie nowych indeksów",
+        "2": "Usunięcie istniejących indeksów",
+        "3": "Wprowadzenie procedury składowanej (SP)",
+        "4": "Wprowadzenie puli połączeń"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "SELECT z EXISTS (klienci z 1997 r.):",
+      "odpowiedzi": {
+        "1": "Nie ustali prawidłowej listy klientów",
+        "2": "Ustali prawidłową listę klientów"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Archiwizacja logów (ARCHIVELOG mode) w Oracle:",
+      "odpowiedzi": {
+        "1": "Jest zalecana w systemach produkcyjnych",
+        "2": "Nie jest zalecana w systemach produkcyjnych",
+        "3": "Pozwala na odtworzenie bazy do dowolnego momentu w czasie (PITR)",
+        "4": "Eliminuje potrzebę wykonywania backupów"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W systemie Apache HBase:",
+      "odpowiedzi": {
+        "1": "Typy danych kolumn nie są deklarowane a priori",
+        "2": "Lista kolumn może być różna w każdym wierszu",
+        "3": "Wykorzystywane są klucze obce"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Baza danych jako pojęcie:",
+      "odpowiedzi": {
+        "1": "Kolekcja dokumentów MS Word",
+        "2": "Kolekcja plików tekstowych",
+        "3": "Relacyjna baza danych",
+        "4": "Obiektowa baza danych"
+      },
+      "poprawne_odpowiedzi": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Tabela zewnętrzna (External Table) w Oracle:",
+      "odpowiedzi": {
+        "1": "To sposób na wykonywanie zapytań SQL na danych w pliku tekstowym",
+        "2": "Jest tym samym co tabela tymczasowa"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Nawiązanie połączenia z Oracle:",
+      "odpowiedzi": {
+        "1": "Wymaga obecności procesu listenera",
+        "2": "Może odwoływać się do różnych listenerów (HA)",
+        "3": "Może bazować na różnych interfejsach sieciowych (HA)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Tabela w 1NF:",
+      "odpowiedzi": {
+        "1": "Zawiera klucz główny",
+        "2": "Może zawierać wartości nieatomowe",
+        "3": "Może zawierać klucz złożony"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Pomyślny COMMIT w Oracle:",
+      "odpowiedzi": {
+        "1": "Gwarantuje trwałość danych",
+        "2": "Oznacza, że dane są już w plikach danych na dysku",
+        "3": "Oznacza, że dane są bezpieczne (w redo log)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Warstwy w GIS:",
+      "odpowiedzi": {
+        "1": "Rastrowe",
+        "2": "Wektorowe",
+        "3": "NoSQL"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Indeksacja adresu (miejscowość, ulica, nr):",
+      "odpowiedzi": {
+        "1": "Jeden indeks złożony (miejscowość, ulica, nr posesji) jest efektywny",
+        "2": "Preferowane jest tworzenie osobnych indeksów"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Niestabilne łącze i konieczność replikacji zmian:",
+      "odpowiedzi": {
+        "1": "Wykonywanie dwóch transakcji w aplikacji",
+        "2": "Wykorzystanie puli połączeń",
+        "3": "Wykorzystanie mechanizmów replikacji"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "CREATE VIEW testView AS SELECT * FROM Orders:",
+      "odpowiedzi": {
+        "1": "Powoduje fizyczne skopiowanie danych",
+        "2": "Zapisuje definicję widoku (zapytanie)",
+        "3": "Wykonuje zapytanie w czasie odwołania się do widoku"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Relacja wiele-do-wielu (M:N) między tabelami A i B:",
+      "odpowiedzi": {
+        "1": "Wymaga nowej tabeli C z kluczami obcymi do A i B",
+        "2": "Wymaga dodania kluczy obcych bezpośrednio do A i B"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Oracle w trybie ARCHIVELOG po awarii dysku:",
+      "odpowiedzi": {
+        "1": "Pozwala na odtworzenie bazy do stanu tuż przed awarią",
+        "2": "Pozwala na odtworzenie bazy tylko do stanu ostatniego backupu",
+        "3": "Nie wymaga backupu"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Zapobieganie SQL Injection:",
+      "odpowiedzi": {
+        "1": "Konkatenacja stringów (query + userInput)",
+        "2": "Parametryzowane zapytania (PreparedStatement)"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Transakcja w trybie READ UNCOMMITTED czyta saldo konta. Co to oznacza?",
+      "odpowiedzi": {
+        "1": "Saldo nie zmieni się w trakcie transakcji",
+        "2": "Rekord może być niezatwierdzony (możliwe „brudne odczyty\")",
+        "3": "Należy użyć innego poziomu izolacji, aby uniknąć błędnych danych",
+        "4": "Należy użyć innego poziomu izolacji dla zwiększenia wydajności"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Wydajność: indeksacja (500 tys. rekordów, kolumna A-unikalna, B-3 wartości):",
+      "odpowiedzi": {
+        "1": "Indeks na kolumnę A (wysoka selektywność)",
+        "2": "Indeks na kolumnę B (niska selektywność)",
+        "3": "Indeks złożony na A i B"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Różnice RDBMS vs Apache HBase (wersjonowanie danych):",
+      "odpowiedzi": {
+        "1": "Obie platformy wspierają wersjonowanie wierszy",
+        "2": "HBase natywnie przechowuje wiele wersji komórek",
+        "3": "W RDBMS wersjonowanie wymaga dodatkowych technik (np. tabele temporalne)"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Polecenie ALTER TABLE:",
+      "odpowiedzi": {
+        "1": "Może zmienić dowolne cechy tabeli",
+        "2": "Może być użyte do dodania kolumny",
+        "3": "Może być użyte do zmiany rozmiaru kolumny tekstowej"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Klucz obcy w relacji wykłady (A) → nauczyciele (B), NOT NULL:",
+      "odpowiedzi": {
+        "1": "Dla każdego nauczyciela istnieje co najmniej jeden wykład",
+        "2": "Dla każdego wykładu istnieje dokładnie jeden nauczyciel",
+        "3": "Wykłady mogą istnieć bez przypisanego nauczyciela"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Wielowymiarowa kostka danych (Data Cube):",
+      "odpowiedzi": {
+        "1": "Typowo zawiera wymiar typu czas",
+        "2": "Typowo zawiera miary typu suma",
+        "3": "Typowo posiada wiele wymiarów (więcej niż 3)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Programowanie: połączenia JDBC / MS SQL Server / Oracle:",
+      "odpowiedzi": {
+        "1": "Wymagana znajomość SQL",
+        "2": "Konieczność autoryzacji",
+        "3": "Wskazanie lokalizacji (serwera)",
+        "4": "Wskazanie sterownika"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Zarządzanie połączeniami w Oracle:",
+      "odpowiedzi": {
+        "1": "Jedno połączenie może być obsługiwane przez dedykowany proces serwerowy",
+        "2": "Jedno połączenie może być obsługiwane przez proces dzielony (shared server)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Baza Oracle a zestawy znaków (character sets):",
+      "odpowiedzi": {
+        "1": "Może obsługiwać różne zestawy znaków jednocześnie (np. Unicode)",
+        "2": "Wymusza użycie tylko jednego zestawu znaków dla całej bazy"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Relacja 1:N między A i B reprezentowana poprzez:",
+      "odpowiedzi": {
+        "1": "Dodanie klucza obcego w tabeli B wskazującego na A",
+        "2": "Dodanie klucza obcego w tabeli A wskazującego na B",
+        "3": "Stworzenie trzeciej tabeli C bez kluczy obcych"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Klucz główny (Primary Key):",
+      "odpowiedzi": {
+        "1": "Musi być unikalny i różny od NULL",
+        "2": "Może zawierać wartości puste (NULL)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Hurtownia danych (DWH) zazwyczaj:",
+      "odpowiedzi": {
+        "1": "Wykorzystuje dane z wielu baz danych",
+        "2": "Wykorzystuje dane po transformacji ETL/ELT",
+        "3": "Wykorzystuje identyczne struktury co bazy źródłowe"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W klastrze hot-failover:",
+      "odpowiedzi": {
+        "1": "Przed awarią w przetwarzaniu zapytań uczestniczą wszystkie serwery (aktywne)",
+        "2": "Przed awarią uczestniczy tylko jeden serwer (passive/standby)",
+        "3": "Po awarii uczestniczą serwery, które przetrwały"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Baza pracowników – przypisanie przełożonego (klucz obcy rekurencyjny):",
+      "odpowiedzi": {
+        "1": "Dodatkowy klucz obcy w tabeli pracowników, akceptujący NULL (dla prezesa)",
+        "2": "Dodatkowy klucz główny",
+        "3": "Dodatkowa tabela"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Warstwa wektorowa typu wielobok (polygon):",
+      "odpowiedzi": {
+        "1": "Obiekt zdefiniowany przez współrzędne wierzchołków",
+        "2": "Obiekt z atrybutami opisowymi",
+        "3": "Obiekt zdefiniowany tylko w jednym, globalnym układzie"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Indeks zgrupowany (clustered index) vs brak indeksu:",
+      "odpowiedzi": {
+        "1": "Poprawia wydajność części zapytań SELECT",
+        "2": "Może pogorszyć wydajność zapytań INSERT",
+        "3": "Zawsze poprawia wydajność każdego zapytania SELECT"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Wartość NULL:",
+      "odpowiedzi": {
+        "1": "Powinna być dopuszczana każdorazowo",
+        "2": "Powinna być dopuszczana tylko wtedy, gdy jest to konieczne (dobra praktyka)"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Wydajność: Clustered Index (indeks zgrupowany):",
+      "odpowiedzi": {
+        "1": "Zmienia fizyczną kolejność danych w tabeli",
+        "2": "Poprawia wydajność zapytań zakresowych",
+        "3": "Może spowolnić operacje INSERT"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  ]
+}

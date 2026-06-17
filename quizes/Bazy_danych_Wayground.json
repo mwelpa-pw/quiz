@@ -1,0 +1,1292 @@
+{
+  "pytania": [
+    {
+      "pytanie": "Administrator systemu baz danych musi dysponować możliwością odczytu danych wszystkich tabel bazy danych Oracle. W związku z tym:",
+      "odpowiedzi": {
+        "1": "Należy założyć, iż administrator nie nadużywa swoich uprawnień, gdyż jest osobą szczególnego zaufania i nie istnieją mechanizmy dedykowane dla takiej sytuacji",
+        "2": "Należy wykorzystać mechanizmy audytu",
+        "3": "Należy wykorzystać mechanizmy transakcyjnej replikacji danych w celu ograniczenia ryzyka nieuzasadnionego odczytu danych",
+        "4": "Należy regularnie wykonywać pełne kopie bezpieczeństwa"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "System NoSQL to typowo:",
+      "odpowiedzi": {
+        "1": "systemy rozwijane w XXI wieku",
+        "2": "systemy bazujące na formalnej teorii NoSQL, stanowiącej rozwinięcie teorii systemów relacyjnych",
+        "3": "systemy bazujące na matematycznej teorii NoSQL, stanowiącej zanegowanie teorii systemów relacyjnych",
+        "4": "systemy typu open source",
+        "5": "systemy relacyjne",
+        "6": "systemy rozwijane w latach siedemdziesiątych XX wieku, przed sformułowaniem założeń języka SQL"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W klastrze cold-failover:",
+      "odpowiedzi": {
+        "1": "Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery",
+        "2": "Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczy jeden serwer",
+        "3": "Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery",
+        "4": "Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczy zawsze co najwyżej jeden serwer"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Pula połączeń to sposób na:",
+      "odpowiedzi": {
+        "1": "obniżanie obciążenia serwera otwieraniem i zamykaniem połączeń",
+        "2": "Poprawę wydajności aplikacji",
+        "3": "Zmniejszenie liczby zapytań SQL przesłanych przez jedno połączenie",
+        "4": "Rezygnację ze stosowania zapytań SQL w odwołaniach do bazy danych",
+        "5": "Rezygnację z konieczności wykorzystania przyrostowych kopii bezpieczeństwa"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W przypadku wykonania transakcji w Ms SQL Server w trybie READ COMMITTED:",
+      "odpowiedzi": {
+        "1": "Istnieje ryzyko tzw. brudnych odczytów (dirty read) w wynikach zapytań SELECT wykonywanych w transakcji",
+        "2": "Istnieje ryzyko tzw. niepowtarzalnych odczytów (nonrepeatable read) w wynikach zapytań SELECT wykonywanych w transakcji",
+        "3": "Uzyskujemy najwyższą możliwą wydajność realizacji zapytań w porównaniu do innych poziomów izolacji transakcji",
+        "4": "Zapytania SQL SELECT nigdy nie zostaną wstrzymane przez blokady"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Wdrożenia rozwiązań określanych jako big data odznaczają się zazwyczaj wykorzystaniem danych:",
+      "odpowiedzi": {
+        "1": "o znacznej wielkości mierzonej np. w liczbie bajtów",
+        "2": "o wyższej jakości niż w relacyjnych bazach danych",
+        "3": "o niższej jakości niż w relacyjnych bazach danych",
+        "4": "składowanych wyłącznie w postaci tabel definiowanych a priori w tzw. trybie schema-on-write",
+        "5": "o różnorodnej postaci, w tym np. wpisów na forach internetowych, czy też logów opisujących zachowania użytkowników w aplikacjach WWW"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja tabeli do pierwszej postaci normalnej:",
+      "odpowiedzi": {
+        "1": "jest procesem o charakterze teoretycznym, pomijanym w praktycznych zastosowaniach",
+        "2": "wymaga m.in. identyfikacji klucza głównego",
+        "3": "zawsze wymaga identyfikacji klucza obcego w tabeli",
+        "4": "dopuszcza wartości nieatomowe w kolumnach tabeli",
+        "5": "nie pozwala na zależność wartości kolumny od innych kolumn nie wchodzących w skład klucza głównego"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Relacja wiele do wielu pomiędzy tabelą A i B jest reprezentowana poprzez:",
+      "odpowiedzi": {
+        "1": "Dodatkowe klucze obce w tabelach A i B",
+        "2": "Dodatkowy klucz obcy w tabeli A wskazujący na tabelę B",
+        "3": "Dodatkowy klucz obcy w tabeli B wskazujący na tabelę A",
+        "4": "Dodatkową tabelę C bez kluczy obcych",
+        "5": "Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B"
+      },
+      "poprawne_odpowiedzi": [
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Warstwy w systemach informacji przestrzennej dzielimy na:",
+      "odpowiedzi": {
+        "1": "Rastrowe",
+        "2": "Faktów",
+        "3": "NoSQL",
+        "4": "Wektorowe",
+        "5": "Długotrwałe transakcyjne"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W systemie Apache HBase:",
+      "odpowiedzi": {
+        "1": "typy danych dla poszczególnych kolumn nie są deklarowane a priori",
+        "2": "lista kolumn może być różna w każdym rekordzie",
+        "3": "lista kolumn jest identyczna w każdym rekordzie",
+        "4": "dane zawarte w kolumnie mogą być różnych typów w poszczególnych rekordach",
+        "5": "wykorzystywane są klucze obce i inne rozwiązania zaczerpnięte z relacyjnych baz danych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Pod pojęciem rozwiązań NoSQL rozumiane są m.in. systemy utrzymujące zasoby danych w postaci:",
+      "odpowiedzi": {
+        "1": "dokumentów np. JSON",
+        "2": "grafów",
+        "3": "rekordów opisanych kolumnami, w tym kluczami obcymi, których poprawność jest weryfikowana przy każdym zapisie przez system",
+        "4": "wierszy opisanych kolumnami, potencjalnie różnymi w każdym wierszu"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Twierdzenie CAP:",
+      "odpowiedzi": {
+        "1": "Dotyczy możliwości jednoczesnego zapewnienia m.in. spójności i przenośności",
+        "2": "Dotyczy możliwości jednoczesnego zapewnienia m.in. spójności i odporności na partycjonowanie",
+        "3": "Dotyczy możliwości jednoczesnego zapewnienia m.in. spójności i dostępności",
+        "4": "Dotyczy systemów rozproszonych i może być odniesione np. do Apache Cassandra",
+        "5": "Dotyczy pojedynczej instancji DBMS np. Oracle Database"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W bazie danych utworzono tabelę z kluczem głównym typu int, którego wartość ma być nadawana automatycznie jako unikalna liczba całkowita. W tej sytuacji rozwiązanie wydajne i skuteczne to:",
+      "odpowiedzi": {
+        "1": "Wyznaczanie wartości klucza głównego poprzez wyznaczenie największej wartości z już obecnych w kolumnie klucza głównego i zwiększanie tej wartości o 1",
+        "2": "Zastosowanie dodatkowej tabeli z rekordami numeratorów",
+        "3": "Zastosowanie mechanizmu IDENTITY"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Na podstawie wyniku zapytania SQL SELECT do tabel obejmujących 7 milionów rekordów uzyskiwane jest 50 wierszy. Najsprawniejszego dalszego przetwarzania danych tych wierszy należy oczekiwać, gdy:",
+      "odpowiedzi": {
+        "1": "Wynik w/w zapytania SQL SELECT jest udostępniany za pomocą widoku reprezentującego w/w zapytanie SQL SELECT i przetwarzanie wykorzysta ten widok",
+        "2": "wynik w/w zapytania SQL SELECT będzie umieszczony w tabeli tymczasowej i przetwarzanie wykorzysta tą tabelę"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Utworzenie widoku CREATE VIEW testView as SELECT * FROM Orders powoduje:",
+      "odpowiedzi": {
+        "1": "Zaalokowanie dodatkowego obszaru w plikach bazy danych na kopię danych tabeli Orders, kopia ta będzie automatycznie aktualizowana przy zmianach w tabeli Orders",
+        "2": "Zapisanie definicji widoku. W chwili wykonania zapytania SELECT * FROM testView, nastąpi zaalokowanie dodatkowego obszaru w plikach bazy danych na kopię danych tabeli Orders",
+        "3": "Zaalokowanie dodatkowego obszaru w plikach bazy danych na kopię danych tabeli Orders, kopia ta nie będzie automatycznie aktualizowana przy zmianach w tabeli Orders",
+        "4": "Zapisanie definicji widoku. W chwili wykonania zapytania SELECT * FROM testView nastąpi wykonanie odpowiedzi z wykorzystaniem aktualnych danych tabeli Orders"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W przypadku zastosowania poziomu izolacji transakcji READ UNCOMMITTED:",
+      "odpowiedzi": {
+        "1": "Występuje ryzyko brudnych odczytów",
+        "2": "Występuje ryzyko zakleszczeń",
+        "3": "Występuje ryzyko niepowtarzalnych odczytów",
+        "4": "Modyfikowane rekordy są blokowane"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Transakcja A wykonuje polecenie SQL UPDATE na rekordzie. W przypadku napotkania przez wykonywaną transakcję A na blokadę ustanowioną przez inną transakcję B modyfikującą ten sam rekord:",
+      "odpowiedzi": {
+        "1": "Transakcja A musi oczekiwać na zakończenie transakcji B poprzez polecenie ROLLBACK lub COMMIT",
+        "2": "Transakcja B musi oczekiwać na zakończenie transakcji A poprzez polecenie COMMIT",
+        "3": "Jedna z aplikacji klienckich musi wstrzymać wykonanie transakcji poprzez polecenie SUSPEND",
+        "4": "Jedna z transakcji jest wycofywana przez serwer bazy danych",
+        "5": "Konieczna jest interwencja administratora bazy danych, by przywrócić działanie systemu; Jedna z transakcji wykonywała wyłącznie odczyt w trybie READ UNCOMMITTED"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Trigger może:",
+      "odpowiedzi": {
+        "1": "Być automatycznie uruchamiany przez serwer po odczytaniu danych rekordu z bazy danych poprzez polecenie SQL SELECT",
+        "2": "Wykonywać polecenie UPDATE SQL na innej tabeli",
+        "3": "Być wywołany przez polecenie EXEC TRIGGER",
+        "4": "Być wykonywany w efekcie operacji modyfikacji danych wykonywanych na bazie przez różne aplikacje klienckie",
+        "5": "Być automatycznie uruchamiany przez serwer po wstawieniu nowego rekordu do bazy danych",
+        "6": "Być automatycznie uruchamiany przez serwer zamiast wstawienia rekordu do bazy danych"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "pytanie": "W sytuacji, gdy nie może być zapewnione stabilne łącze pomiędzy serwerami baz danych i konieczne jest nanoszenie tych samych zmian w tych serwerach baz danych, zalecane jest:",
+      "odpowiedzi": {
+        "1": "Wykonywanie dwóch transakcji przez aplikację kliencką - po jednej na każdym serwerze bazy danych",
+        "2": "Wykorzystanie puli połączeń do głównego serwera",
+        "3": "Wykorzystanie klastra serwerów",
+        "4": "Wykorzystanie mechanizmów replikacji"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Relacja jeden do wielu między tabelą A i B jest reprezentowana poprzez:",
+      "odpowiedzi": {
+        "1": "Dodatkowe klucze obce w tabelach A i B",
+        "2": "Dodatkowy klucz obcy w tabeli B wskazujący na tabelę A",
+        "3": "Dodatkowy klucz obcy w tabeli A wskazujący na tabelę B",
+        "4": "Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B",
+        "5": "Dodatkową tabelę C bez kluczy obcych",
+        "6": "Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B i klucze obce w tabelach A i B",
+        "7": "Dodatkową tabelę C bez kluczy obcych i klucze obce w tabelach A i B"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Wartość NULL to:",
+      "odpowiedzi": {
+        "1": "Wartość oznaczająca brak daty w przypadku pola typu data",
+        "2": "Wartość 0 w przypadku pola typu liczba całkowita",
+        "3": "Wartość, która powinna być dopuszczana każdorazowo, gdy jest taka możliwość",
+        "4": "Wartość, która powinna być dopuszczana tylko wtedy, gdy jest to konieczne"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja tabeli do trzeciej postaci normalnej:",
+      "odpowiedzi": {
+        "1": "Jest procesem o charakterze teoretycznym, pomijanym w praktycznych zastosowaniach",
+        "2": "Wymaga m.in. identyfikacji klucza głównego",
+        "3": "Zawsze wymaga identyfikacji klucza obcego w tej tabeli",
+        "4": "Dopuszcza wartości nieatomowe w kolumnach tabeli",
+        "5": "Wymaga wcześniejszego uzyskania czwartej postaci normalnej"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Rezultatem porównania 'abc'=NULL jest:",
+      "odpowiedzi": {
+        "1": "TRUE",
+        "2": "Ponadto, rezultatem 'abc'>NULL jest TRUE",
+        "3": "NULL",
+        "4": "=FALSE()",
+        "5": "Ponadto, rezultatem 'abc'>NULL jest FALSE"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W bazie danych pracowników należy przypisać aktualnego przełożonego (innego z pracowników) do każdego z pracowników z wyjątkiem prezesa firmy. W tym celu należy:",
+      "odpowiedzi": {
+        "1": "dodać klucz obcy w tabeli pracowników, akceptujący wartość NULL",
+        "2": "dodać dodatkowy klucz obcy w tabeli pracowników, nie akceptujący wartości NULL",
+        "3": "Stworzyć dodatkową tabelę, by zawrzeć w/w informację",
+        "4": "Stworzyć dodatkowy klucz główny w tabeli pracowników"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "W przypadku wykonania polecenia ROLLBACK:",
+      "odpowiedzi": {
+        "1": "Wycofane zostaną zmiany w bazie danych wynikające z poleceń SQL INSERT i objęte zakresem transakcji",
+        "2": "Wycofane zostaną zmiany w bazie danych wynikające z poleceń SQL UPDATE i objęte zakresem transakcji",
+        "3": "Wycofane zostaną zmiany w bazie danych wynikające z poleceń SQL DELETE i objęte zakresem transakcji",
+        "4": "Wycofane zostaną zmiany w bazie danych wynikające z zakleszczonych transakcji",
+        "5": "Potwierdzone zostaną zmiany w kluczach obcych wszystkich rekordów, a modyfikowane rekordy, utworzone przed rozpoczęciem transakcji zostaną usunięte"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Liczba wierszy w wyniku zapytania SELECT * FROM TabelaA JOIN TabelaB ON 7=3 or 7>1 będzie równa:",
+      "odpowiedzi": {
+        "1": "Liczbie rekordów w tabeli A",
+        "2": "Liczbie rekordów w tabeli B",
+        "3": "Zero",
+        "4": "Iloczynowi liczby rekordów w tabeli A i liczby rekordów w tabeli B",
+        "5": "Sumie liczby rekordów w tabeli A i liczby rekordów w tabeli B"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Hurtownia danych:",
+      "odpowiedzi": {
+        "1": "Zazwyczaj wykorzystuje bezpośrednio dane tabel systemu OLTP",
+        "2": "Zazwyczaj wykorzystuje dane po transformacji z wykorzystaniem systemu BI",
+        "3": "Zazwyczaj wykorzystuje dane po transformacji z wykorzystaniem systemu ETL",
+        "4": "Zazwyczaj korzysta z identycznych struktur danych jak baza danych OLTP",
+        "5": "Zawiera dane z ostatniego roku działalności firmy - w celu zapewnienia wydajnej realizacji zapytań OLAP",
+        "6": "Wykorzystuje dane dużych kolumn binarnych (np. zdjęcia produktów zapisane w formacie JPG)",
+        "7": "Zawsze zawiera znormalizowane dane"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Statystyki zawarte w ramach bazy danych Oracle:",
+      "odpowiedzi": {
+        "1": "Nie powinny być stosowane, gdyż spowalniają wykonanie zapytań",
+        "2": "Powinny być stosowane, gdyż powodują przygotowanie lepszych planów wykonania zapytań"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Stworzono warstwę wektorową typu wielobok. Obiekt tej warstwy jest definiowany poprzez:",
+      "odpowiedzi": {
+        "1": "Lokalizację zdefiniowaną w wybranym układzie współrzędnych, opisaną przez współrzędne wierzchołków",
+        "2": "Atrybuty opisowe",
+        "3": "Lokalizację zdefiniowaną zawsze w tym samym, wspólnym dla wszystkich systemów GIS, układzie współrzędnych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Opcje audytu bazy danych Oracle umożliwiają:",
+      "odpowiedzi": {
+        "1": "Monitorowanie wykorzystania poszczególnych poleceń SQL",
+        "2": "Monitorowanie udanych prób połączenia z instancją",
+        "3": "Monitorowanie nieudanych prób połączenia z instancją",
+        "4": "Są rozwiązaniem, które powinno być stosowane zamiast definiowania uprawnień do poszczególnych tabel",
+        "5": "Są rozwiązaniem, które powinno być stosowane równolegle z nadawaniem uprawnień do tabel"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Warstwy w systemach informacji przestrzennej dzielimy na:",
+      "odpowiedzi": {
+        "1": "Rastrowe",
+        "2": "Relacyjne",
+        "3": "Wektorowe",
+        "4": "Długotrwałe transakcyjne"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W systemie bazy danych stwierdzono nieakceptowaną wydajność realizacji często wykonywanej sekwencji złożonych zapytań SQL SELECT. Potencjalnie korzystne działania to:",
+      "odpowiedzi": {
+        "1": "Dodanie nowych indeksów",
+        "2": "Usunięcie istniejących indeksów",
+        "3": "Wprowadzenie procedury składowanej i zawarcie w niej kodu zapytań SQL SELECT",
+        "4": "Wprowadzenie wykorzystania puli połączeń",
+        "5": "Rezygnacja z użycia procedur składowanych",
+        "6": "Rezygnacja ze stosowania puli połączeń"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W każdym wierszu tabeli lista użytych kolumn jest inna. Można również wstawić do tabeli wiersz, w którym użyjemy dowolnych, nowych nazw kolumn. Sytuacja taka oznacza, że tabela została stworzona:",
+      "odpowiedzi": {
+        "1": "w relacyjnej bazie danych",
+        "2": "w hurtowni danych",
+        "3": "w systemie NoSQL"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Diagramy ER:",
+      "odpowiedzi": {
+        "1": "zawierają encje",
+        "2": "zawierają relacje",
+        "3": "opisują znaczenie relacji",
+        "4": "przedstawiają powiązania między tabelami, są to powiązania w całości inne niż definiowane przez klucze obce"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Należy ustalić listę klientów, którzy złożyli zamówienia w roku 1997. Zapytanie select * from Customers where exists (select * from orders where YEAR(OrderDate)=1997):",
+      "odpowiedzi": {
+        "1": "Nie ustali prawidłowej listy klientów spełniających w/w warunek",
+        "2": "Ustali prawidłową listę klientów spełniających w/w warunek"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W kostce danych:",
+      "odpowiedzi": {
+        "1": "Typowo obecny jest wymiar typu czas",
+        "2": "Typowo obecna jest miara liczbowa typu suma",
+        "3": "wymiary sporadycznie mają postać hierarchiczną",
+        "4": "występują zawsze co najwyżej 3 wymiary",
+        "5": "typowo występuje wiele wymiarów"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "W przypadku baz danych Oracle:",
+      "odpowiedzi": {
+        "1": "Zapis do logów transakcyjnych następuje przed potwierdzeniem aplikacji klienckiej pomyślnego zakończenia transakcji",
+        "2": "Wyłączenie zasilania serwera skutkuje utratą zmian wprowadzonych w ramach zakończonych transakcji",
+        "3": "Wyłączenie zasilania serwera skutkuje utratą zmian wprowadzonych w ramach transakcji w trakcie realizacji",
+        "4": "Wyłączenie zasilania serwera gwarantuje, iż zarówno dane transakcji w trakcie realizacji, jak i już zakończonych nie zostaną utracone"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W klastrze hot-failover:",
+      "odpowiedzi": {
+        "1": "Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery",
+        "2": "Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczy jeden serwer",
+        "3": "Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery",
+        "4": "Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczy zawsze co najwyżej jeden serwer"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Połączenia sieciowe z instancją bazy danych Oracle:",
+      "odpowiedzi": {
+        "1": "zawsze bazują na TCP/IP",
+        "2": "mogą zapewniać automatyczną próbę połączenia z innym adresem IP procesu listenera, w przypadku, gdy podstawowy nie odpowiada",
+        "3": "mogą bazować na odwołaniu do plików konfiguracyjnych, określających sposób nawiązywania danego połączenia np. decyzję o użyciu opcji load balance"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Tabela Customers w kolumnie ContactName przyjmuje wartości NULL. Zapytanie select * from Customers where ContactName != null:",
+      "odpowiedzi": {
+        "1": "Zostanie wykonane i ustali listę klientów z przypisaną osobą kontaktową",
+        "2": "Zostanie wykonane i nie ustali listy klientów z przypisaną osobą kontaktową",
+        "3": "Nie zostanie wykonane i nie ustali listy klientów z przypisaną osobą kontaktową",
+        "4": "Nie zostanie wykonane, ale ustali listę klientów z przypisaną osobą kontaktową"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Programista przygotowuje kod aplikacji klienckiej, który ma pobierać z bazy danych dane faktur klientów z podanej lokalizacji określonej przez fragment nazwy miasta i/lub ulicy. Zalecane rozwiązanie to:",
+      "odpowiedzi": {
+        "1": "Złączenie (konkatenacja) ciągu znaków z treścią zapytania SQL z wartościami tekstowymi pobranymi z interfejsu użytkownika",
+        "2": "Wykorzystanie mechanizmu parametryzowanych zapytań (np. PreparedStatement) i parametryzacja zapytania SQL SELECT",
+        "3": "Oba powyższe, gdyż będą prowadzić do tej samej wydajności operacji wykonywanych na bazie danych",
+        "4": "Oba powyższe, gdyż będą prowadzić do kodu równie poprawnego, o ile wydajność nie jest krytycznie ważna"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W przypadku pomyślnego wykonania polecenia COMMIT kończącego transakcję i potwierdzonego przez usługę Oracle DBMS:",
+      "odpowiedzi": {
+        "1": "Mamy gwarancję, iż zmienione w ramach transakcji dane zostały już zapisane w plikach bazy danych",
+        "2": "Mamy gwarancję, iż zmienione w ramach transakcji dane nie zostaną utracone w wyniku nagłego zakończenia pracy instancji DBMS w trybie ABORT",
+        "3": "Będziemy niezależnie od archiwizacji (lub braku archiwizacji) logów transakcyjnych mogli w przyszłości odzyskać bazę danych do stanu uwzględniającego zmiany wprowadzone w bazie danych przez transakcję"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W bazie danych Oracle:",
+      "odpowiedzi": {
+        "1": "Obsługa jednego połączenia może być realizowana przez na stałe przypisany proces serwerowy",
+        "2": "Obsługa jednego połączenia może być realizowana przez proces serwerowy, który na przemian obsługuje również inne połączenia",
+        "3": "kopie bezpieczeństwa i operacje wsadowe powinny być wykonywane przez dedykowany proces serwera",
+        "4": "obsługa jednego połączenia musi być realizowana przez na stałe przypisany proces serwerowy"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W przypadku aplikacji klient-serwer (tzw. gruby klient) uruchomionej na 500 stacjach roboczych i komunikującej się bezpośrednio z serwerem bazy danych Oracle, zalecane jest użycie do nawiązywania połączeń:",
+      "odpowiedzi": {
+        "1": "Dedykowanych procesów serwera",
+        "2": "Puli połączeń",
+        "3": "Dzielonych procesów serwera",
+        "4": "Rezygnacja z wykorzystania poleceń SQL"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Pliki logów transakcyjnych w systemie transakcyjnym:",
+      "odpowiedzi": {
+        "1": "są konieczne do działania systemu",
+        "2": "są opcjonalne dla funkcjonowania systemu",
+        "3": "mogą podlegać archiwizacji",
+        "4": "są wykorzystywane w trakcie odtwarzania bazy danych po awarii"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Baza danych:",
+      "odpowiedzi": {
+        "1": "może obsługiwać różne zestawy znaków narodowych, ale konieczny jest wybór tylko jednego w chwili instalacji bazy",
+        "2": "może obsługiwać różne zestawy znaków narodowych jednocześnie",
+        "3": "może stosować więcej niż jeden zestaw znaków narodowych w tym samym czasie"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Nawiązanie nowego połączenia sieciowego z bazą danych Oracle:",
+      "odpowiedzi": {
+        "1": "Typowo bazuje na połączeniu TCP/IP, z wykorzystaniem portu 1521",
+        "2": "Wymaga obecności procesu listenera",
+        "3": "Musi wykorzystywać protokół TCP/IP",
+        "4": "Może w sposób automatyczny odwoływać się do różnych procesów listenera, np. by zapewnić odporność na awarie"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Polecenia CREATE TABLE:",
+      "odpowiedzi": {
+        "1": "zawsze mają identyczną postać w każdym systemie RDBMS np. Oracle Database lub MS SQL Server",
+        "2": "mogą mieć różną postać w różnych systemach RDBMS np. Oracle Database lub MS SQL Server",
+        "3": "mogą być stosowane do modyfikacji struktury istniejącej tabeli"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Archiwizacja logów transakcyjnych Oracle:",
+      "odpowiedzi": {
+        "1": "Jest zalecana w produkcyjnych systemach (wykorzystywanych do bieżącej obsługi procesów przedsiębiorstwa)",
+        "2": "Nie jest zalecana w produkcyjnych systemach (wykorzystywanych do bieżącej obsługi procesów przedsiębiorstwa)",
+        "3": "Pozwala na odtworzenie bazy danych do dowolnego momentu w czasie",
+        "4": "Eliminuje potrzebę wykonywania kopii bezpieczeństwa bazy danych",
+        "5": "eliminuje potrzebę uruchamiania opcji audytu"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Z punktu widzenia wydajności przetwarzania danych przez wielu użytkowników systemów transakcyjnych np. Ms SQL:",
+      "odpowiedzi": {
+        "1": "wskazane są liczne transakcje o krótkim czasie realizacji",
+        "2": "wskazana jest niewielka liczba transakcji o czasie realizacji rzędu dziesiątek minut",
+        "3": "w przetwarzaniu danych operacji finansowo-księgowych zaleca się rezygnację z użycia transakcji, czyli wykonywanie i zatwierdzanie każdego polecenia SQL osobno"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Polecenie ALTER TABLE:",
+      "odpowiedzi": {
+        "1": "może zmienić dowolne cechy tabeli",
+        "2": "może zmienić tylko niektóre cechy tabeli, część cech nie może być zmieniona przez to polecenie",
+        "3": "może być użyte do dodania kolumny",
+        "4": "może być użyte do wydłużenia kolumny tekstowej"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Wykonano pomyślnie polecenia BEGIN TRANSACTION, INSERT, UPDATE, COMMIT. Serwer potwierdził wykonanie wszystkich poleceń. W tej sytuacji:",
+      "odpowiedzi": {
+        "1": "zarówno polecenie INSERT, jak i UPDATE zostało wykonane pomyślnie",
+        "2": "istnieje ryzyko, iż tylko polecenie UPDATE zostało wykonane pomyślnie",
+        "3": "jeśli wystąpi awaria zasilania serwera, to istnieje ryzyko, iż jedna lub obie ze zmian były obecne tylko w buforach pamięciowych i zostaną utracone"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja tabeli do drugiej postaci normalnej:",
+      "odpowiedzi": {
+        "1": "Jest procesem o charakterze teoretycznym, pomijanym w praktycznych zastosowaniach",
+        "2": "Wymaga m.in. identyfikacji klucza głównego",
+        "3": "Zawsze wymaga identyfikacji klucza obcego w tej tabeli",
+        "4": "Dopuszcza wartości nieatomowe w kolumnach tabeli",
+        "5": "Wymaga wcześniejszego uzyskania pierwszej postaci normalnej"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "W sytuacji, gdy nie może być zapewnione stabilne łącze sieciowe pomiędzy aplikacją a dwoma serwerami baz danych i konieczne jest nanoszenie tych samych zmian w obu serwerach baz danych, zalecane jest:",
+      "odpowiedzi": {
+        "1": "Wykonywanie dwóch transakcji przez aplikację kliencką - po jednej na każdym serwerze bazy danych",
+        "2": "Wykonywanie zmian z wykorzystaniem transakcji rozproszonej modyfikującej każdą z baz danych",
+        "3": "Wykorzystanie dwóch klastrów serwerów działających w trybie hot-failover zamiast jednego klastra",
+        "4": "Wykorzystanie mechanizmów replikacji"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja tabeli do trzeciej postaci normalnej:",
+      "odpowiedzi": {
+        "1": "Nie pozwala na zależność wartości kolumny od innych kolumn nie wchodzących w skład klucza głównego",
+        "2": "Ma na celu m.in. wyeliminowanie anomalii wynikających z redundancji w bazie danych",
+        "3": "Może powodować zbędne tworzenie dodatkowych tabel",
+        "4": "Dopuszcza wartości nieatomowe w kolumnach tabeli",
+        "5": "Zgodnie z dobrymi praktykami, może być potencjalnie pominięta w systemach hurtowni danych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Indeks powinien zostać utworzony:",
+      "odpowiedzi": {
+        "1": "Zawsze dla klucza głównego (ewentualnie może być tworzony automatycznie przez system)",
+        "2": "Zawsze na kolumnach dwuwartościowych",
+        "3": "Na kolumnach klucza obcego - jeden indeks dla jednego klucza obcego danej tabeli, przy założeniu wysokiej selektywności klucza obcego"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Wdrożenie rozwiązań określanych jako big data odznaczają się zazwyczaj wykorzystaniem danych:",
+      "odpowiedzi": {
+        "1": "o znacznej wielkości mierzonej np. w liczbach bajtów",
+        "2": "o różnorodnej postaci w tym np. wpisów na forach internetowych, czy też logów opisujących zachowania użytkowników w aplikacjach WWW",
+        "3": "o niższej jakości niż w relacyjnych bazach danych",
+        "4": "o identycznej jakości niż w relacyjnych bazach danych, wdrożenia te zazwyczaj wykorzystują relacyjne bazy danych jako źródło większości danych",
+        "5": "o wyłącznie postaci hierarchicznej",
+        "6": "O wyższej jakości niż w relacyjnych bazach danych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "The risks related to SQL code execution can be mitigated by:",
+      "odpowiedzi": {
+        "1": "relying on parameterized queries, in which parameters represent the values provided by a user e.g. the name of the country from which the customers are sought",
+        "2": "concatenating SQL query text with the text provided by a user e.g. the name of the country from which the customers are sought"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "After the list of columns for the tables planned in a relational database has been developed:",
+      "odpowiedzi": {
+        "1": "System scope should be defined",
+        "2": "Normalization should be performed",
+        "3": "Possible high-level interaction with other databases should be identified"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "A transaction includes one INSERT statement inserting two records and one DELETE statement deleting two records. No triggers exist for the involved tables. The transaction has been committed successfully. This means:",
+      "odpowiedzi": {
+        "1": "The two records have been inserted",
+        "2": "possibly not all requested records have been deleted",
+        "3": "at most two records have been inserted, but possibly just one",
+        "4": "all changes were already saved in a transaction log",
+        "5": "all changes were already saved in data files"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Oracle Net components:",
+      "odpowiedzi": {
+        "1": "make it possible to connect with Oracle Database using TCP/IP only",
+        "2": "include listener process (or processes) located on the server-side",
+        "3": "in the case of TCP/IP are always configured with a single IP address per one DBMS instance",
+        "4": "make it possible to use multiple listeners to provide an access to one DBMS instance, but this is not suggested"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "A table in second normal form:",
+      "odpowiedzi": {
+        "1": "contains primary key",
+        "2": "can include non-atomic values",
+        "3": "can include one column for all address data i.e. (city, street, house number)",
+        "4": "can contain composite primary key",
+        "5": "is also a table in the third normal form",
+        "6": "can include columns that depend on a part of a primary key only"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "A transaction got suspended by another transaction and waits for a lock to be released:",
+      "odpowiedzi": {
+        "1": "every time this happens a database administrator has to resolve the problem",
+        "2": "this is normal as long as the time it is suspended is acceptable",
+        "3": "every time this happens DBMS will terminate the suspended transaction, as this means deadlock occured",
+        "4": "this has to be fully avoided by redesigning client application",
+        "5": "this has to be fully avoided by redesigning the structure of the tables"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "To perform analytical processing providing interactive plots based on data retrieved with SQL queries the following systems should be used (consider both query execution and producing plots):",
+      "odpowiedzi": {
+        "1": "Apache HBase",
+        "2": "Relational database management system",
+        "3": "Apache Hadoop",
+        "4": "Business Intelligence platform",
+        "5": "MongoDB"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "A table in first normal form:",
+      "odpowiedzi": {
+        "1": "contains primary key",
+        "2": "can include non-atomic values",
+        "3": "can include one column for all address data i.e. (city, street, house number)",
+        "4": "can contain composite primary key",
+        "5": "can include columns that depend on a part of a primary key only"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Big data resources are characterized by:",
+      "odpowiedzi": {
+        "1": "High volume",
+        "2": "High visibility",
+        "3": "High quality",
+        "4": "High variety"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "A table of products has been designed, which includes a column with a list of parts comprising the product. Individual part names in this column are comma separated. Such a table:",
+      "odpowiedzi": {
+        "1": "Is in the first normal form",
+        "2": "Is in the second normal form",
+        "3": "Is in the third normal form",
+        "4": "Is not normalised"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "A many to many relation has been identified between tables A and B. This means:",
+      "odpowiedzi": {
+        "1": "Foreign keys have to be added to both of the tables",
+        "2": "A new table with one foreign key is needed",
+        "3": "A new table with two foreign keys is needed",
+        "4": "A new table without foreign keys is needed"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "NoSQL platforms are used:",
+      "odpowiedzi": {
+        "1": "As a replacement of data warehouse platforms",
+        "2": "Frequently for keeping large volumes of data, many of NoSQL platforms are cluster-oriented systems",
+        "3": "For keeping relational databases",
+        "4": "For extensive reporting with SQL queries"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "In tax office database, there is a need to frequently search for citizen data within MS SQL Server database based on name and surname of the person, both provided at each time. Hence, a reasonable solution is to:",
+      "odpowiedzi": {
+        "1": "Create two clustered indexes in the table",
+        "2": "Create two unclustered indexes in the table, one for name and one for surname",
+        "3": "Create one clustered index and one unclustered index, one for name and one for surname",
+        "4": "Create one unclustered index including both name and surname",
+        "5": "Not create any indexes"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "CAP theorem:",
+      "odpowiedzi": {
+        "1": "refers to the way consistency (C), atomicity (A) and PZLU can be attained",
+        "2": "refers to the way consistency (C), atomicity (A) and partition tolerance (P) can be attained",
+        "3": "refers to the way consistency (C), availability (A) and persistence can be attained",
+        "4": "refers to the way consistency (C), availability (A) and partition tolerance (P) can be attained"
+      },
+      "poprawne_odpowiedzi": [
+        "4"
+      ]
+    },
+    {
+      "pytanie": "W przypadku wykonania polecenia ROLLBACK:",
+      "odpowiedzi": {
+        "1": "Zmiany wprowadzone we wszystkich transakcjach w trakcie realizacji (jeszcze nie zakończonych poleceniem COMMIT) zostaną wycofane",
+        "2": "Zmiany wprowadzone w innych transakcjach zakończonych poleceniem COMMIT mogą być utracone - jeśli były zapisane tylko w buforach pamięciowych",
+        "3": "Zmiany wprowadzone w bieżącej transakcji zostaną wycofane",
+        "4": "Zmiany wprowadzone w innych transakcjach zakończonych poleceniem COMMIT zostaną wycofane"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Przykłady bazy danych to:",
+      "odpowiedzi": {
+        "1": "kolekcja dokumentów Ms Word",
+        "2": "kolekcja plików tekstowych",
+        "3": "relacyjna baza danych",
+        "4": "obiektowa baza danych"
+      },
+      "poprawne_odpowiedzi": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "A column was removed from a table. There are triggers registered for the table. As a consequence:",
+      "odpowiedzi": {
+        "1": "some previously correct INSERT statements may fail",
+        "2": "some previously correct SELECT statements may fail",
+        "3": "some previously correct DELETE statements may fail",
+        "4": "some previously correct UPDATE statements may fail"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Data warehouse:",
+      "odpowiedzi": {
+        "1": "contains usually data loaded from one database",
+        "2": "contains usually data loaded from many databases",
+        "3": "contains data usually for longer periods of time than the source databases",
+        "4": "contains data usually for shorter periods of time than the source databases",
+        "5": "contains the same tables, primary and foreign keys as the source databases"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Data warehouse:",
+      "odpowiedzi": {
+        "1": "Contains all columns present in OLTP database",
+        "2": "Is nowadays replaced by Apache Hadoop",
+        "3": "Has higher quality data than Big Data resources",
+        "4": "Typically contains data from multiple relational databases"
+      },
+      "poprawne_odpowiedzi": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Big Data is:",
+      "odpowiedzi": {
+        "1": "typically used with schema-on-write approach",
+        "2": "typically used with schema-on-read approach",
+        "3": "typically carefully modelled before being placed in a system",
+        "4": "frequently stored in Apache Hadoop",
+        "5": "typically being relational database management system"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Pula połączeń to sposób na:",
+      "odpowiedzi": {
+        "1": "obniżenie obciążenia serwera otwieraniem i zamykaniem połączeń",
+        "2": "Poprawę wydajności aplikacji",
+        "3": "Ograniczenie liczby aktywnych połączeń",
+        "4": "Zmniejszenie liczby zapytań SQL przesyłanych przez jedno połączenie"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Polecenie SHUTDOWN ABORT:",
+      "odpowiedzi": {
+        "1": "może uszkodzić dane",
+        "2": "jest zalecane w przypadku, gdy chcemy zapewnić możliwość zakończenia przez użytkowników pracy z bazą danych",
+        "3": "nie jest zalecane w przypadku, gdy chcemy zapewnić możliwość zakończenia przez użytkowników pracy z bazą",
+        "4": "może powodować wydłużone oczekiwanie na zakończenie pracy instancji bazy danych",
+        "5": "może powodować wydłużone oczekiwanie na kolejne uruchomienie instancji bazy danych"
+      },
+      "poprawne_odpowiedzi": [
+        "3",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Programista przygotowuje kod aplikacji klienckiej, który ma pobierać z bazy danych dane faktur klientów z podanej lokalizacji określanej przez fragment nazwy miasta i/lub ulicy. Zalecane rozwiązanie to:",
+      "odpowiedzi": {
+        "1": "Złączenie (konkatenacja) ciągu znaków z treścią zapytania SQL z wartościami tekstowymi pobranymi z interfejsu użytkownika",
+        "2": "Wykorzystanie mechanizmu parametryzowanych zapytań (np. PreparedStatement) i parametryzacja zapytania SQL SELECT",
+        "3": "Oba powyższe, gdyż będą prowadzić do tej samej wydajności operacji wykonywanych na bazie danych",
+        "4": "Oba powyższe, gdyż będą prowadzić do kodu równie poprawnego, o ile wydajność nie jest krytycznie ważna"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "A table in third normal form:",
+      "odpowiedzi": {
+        "1": "contains primary key",
+        "2": "can include non-atomic values",
+        "3": "can include one column for all address data i.e. (city, street, house number)",
+        "4": "can contain composite primary key",
+        "5": "is also a table in the second normal form",
+        "6": "can include columns that depend on a part of a primary key only"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Oracle database has been successfully running in ARCHIVE mode and suggested backups were created. After the failure of a disk containing data files:",
+      "odpowiedzi": {
+        "1": "The database can be recovered to the moment of last whole backup of a database",
+        "2": "The database can be recovered till the moment immediately preceding disk failure",
+        "3": "Backup is not needed to recover the database"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W przypadku wykonania polecenia ROLLBACK:",
+      "odpowiedzi": {
+        "1": "Zmiany wprowadzone we wszystkich transakcjach w trakcie realizacji (jeszcze nie zakończonych poleceniem COMMIT) zostaną wycofane",
+        "2": "Zmiany wprowadzone w innych transakcjach zakończonych poleceniem COMMIT mogą być utracone - jeśli były zapisane tylko w buforach pamięciowych",
+        "3": "Zmiany wprowadzone w bieżącej transakcji zostaną wycofane",
+        "4": "Zmiany wprowadzone w innych transakcjach zakończonych poleceniem COMMIT zostaną wycofane"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Indeks powinien zostać utworzony:",
+      "odpowiedzi": {
+        "1": "Zawsze dla klucza głównego (ewentualnie może być tworzony automatycznie przez system)",
+        "2": "Zawsze na kolumnach dwuwartościowych",
+        "3": "Zawsze na kolumnach klucza obcego - jeden indeks dla jednego klucza obcego danej tabeli, przy założeniu selektywności klucza obcego",
+        "4": "Zawsze na kolumnach często wykorzystywanych w operacjach wyszukiwania",
+        "5": "Zawsze na złożonych (wielokolumnowych) kluczach obcych"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "W celu składowania danych w platformie Apache Hadoop przy założeniu użycia wyłącznie tej platformy (tzn. bez jednoczesnego użycia np. platform NoSQL) konieczne jest:",
+      "odpowiedzi": {
+        "1": "określenie struktury tabeli, w której będą zapisywane dane z podaniem nazw kolumn i typów danych dla tych kolumn",
+        "2": "określenie nazwy i ścieżki dostępu do pliku do którego mają być zapisane dane",
+        "3": "wybranie formatu pliku, do którego mają być zapisywane dane, gdyż nie jest on narzucany przez Apache Hadoop",
+        "4": "określenie tylko nazwy tabeli i nazw rodzin kolumn, w których będą zapisywane dane bez podawania nazw kolumn i typów tych kolumn"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Indeks powinien zostać utworzony:",
+      "odpowiedzi": {
+        "1": "Na kolumnach kluczy głównych - po jednym indeksie na klucz główny",
+        "2": "Na kolumnach klucza głównego - po jednym indeksie na jedną kolumnę klucza głównego danej tabeli",
+        "3": "Zawsze na kolumnach trójwartościowych",
+        "4": "Na kolumnach klucza obcego - po jednym indeksie na dany klucz obcy danej tabeli, przy założeniu wysokiej selektywności klucza obcego",
+        "5": "Na kolumnach często wykorzystywanych w operacjach wyszukiwania - zależnie od ich selektywności",
+        "6": "Zawsze na kolumnach często wykorzystywanych w operacjach wyszukiwania"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Normalizacja tabeli do drugiej postaci normalnej:",
+      "odpowiedzi": {
+        "1": "Nie pozwala na zależność wartości kolumny od innych kolumn nie wchodzących w skład klucza głównego",
+        "2": "Zgodnie z dobrymi praktykami, może być pominięta w systemach typu OLAP",
+        "3": "Ma na celu m.in. wyeliminowanie anomalii wynikających z redundancji w bazie danych",
+        "4": "Może powodować zbędne tworzenie dodatkowych tabel",
+        "5": "Zgodnie z dobrymi praktykami, może być pominięta w systemach typu OLTP"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Utworzono tabele: PERSONS z kluczem głównym PERSON_ID oraz BUS_LINES z kluczem głównym BUS_ID. Tabele te opisują osoby dojeżdżające do pracy komunikacją miejską oraz linie autobusowe. Ponadto stworzono tabelę PERSON_BUSES z kolumnami: PERSON_ID i BUS_ID, której celem jest zapewnienie informacji o liniach autobusowych typowo wykorzystywanych przez daną osobę do dojazdu do pracy. W opisanym modelu danych:",
+      "odpowiedzi": {
+        "1": "Tabela PERSON_BUSES jest zbędna",
+        "2": "Należy utworzyć wspólny indeks dla kolumn PERSON_ID oraz BUS_ID",
+        "3": "PERSON_ID to klucz obcy",
+        "4": "BUS_ID to klucz obcy",
+        "5": "W tabeli PERSON_BUSES są dwa klucze główne",
+        "6": "Należy stworzyć unikalny indeks dla kolumny BUS_ID",
+        "7": "Należy stworzyć dwa indeksy typu zgrupowanego (clustered) w tabeli PERSON_BUSES"
+      },
+      "poprawne_odpowiedzi": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Zestawienie połączenia z aplikacji Java z bazą danych udostępnianą w modelu klient-serwer (np. z bazą MS SQL Server lub Oracle) wymaga:",
+      "odpowiedzi": {
+        "1": "Znajomości języka SQL",
+        "2": "Utworzenia połączenia do bazy danych",
+        "3": "Pomyślnego wykonania autoryzacji",
+        "4": "Wskazania lokalizacji sieciowej systemu DBMS",
+        "5": "Wskazania sterownika wykorzystywanego do nawiązania połączenia",
+        "6": "Określenia parametrów połączenia sieciowego"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "pytanie": "Mapowanie obiektowo-relacyjne:",
+      "odpowiedzi": {
+        "1": "Jest stosowane w obiektowych bazach danych",
+        "2": "Może ograniczyć ilość tworzonego przez programistę aplikacji kodu SQL",
+        "3": "Całkowicie eliminuje konieczność tworzenia kodu SQL w przypadku złożonych raportów",
+        "4": "Jest rozwiązaniem wygodnym, ale utrudnia uzyskanie koniecznej wydajności obsługi transakcji"
+      },
+      "poprawne_odpowiedzi": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Tabela zewnętrzna bazy danych Oracle:",
+      "odpowiedzi": {
+        "1": "Jest tym samym, co tabela tymczasowa bazy danych",
+        "2": "To sposób na wykonywanie zapytań SQL na danych zapisanych w zewnętrznym pliku tekstowym",
+        "3": "Identycznie jak tabela tymczasowa może być zasilona wynikiem zapytania SQL SELECT kierowanego do standardowej tabeli bazy danych",
+        "4": "Jest rozwiązaniem zalecanym w zastępstwie standardowych tabel dla utrzymywania głównych danych bazy"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Nawiązanie nowego połączenia sieciowego z bazą danych Oracle:",
+      "odpowiedzi": {
+        "1": "Wymaga obecności procesu listenera",
+        "2": "Musi wykorzystywać protokół TCP/IP",
+        "3": "Może odwoływać się do różnych procesów listenera, a rozwiązanie takie sprzyja wysokiej dostępności",
+        "4": "Może być realizowane za pośrednictwem różnych interfejsów sieciowych (i np. różnych adresów IP), a rozwiązanie takie sprzyja wysokiej dostępności",
+        "5": "nie powinno być realizowane z wykorzystaniem procesu listenera"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Z punktu widzenia fizycznej alokacji danych na dyskach, baza danych Oracle składa się z:",
+      "odpowiedzi": {
+        "1": "Przestrzeni tabel, a te z plików z logami transakcyjnymi",
+        "2": "plików z danymi, a te z przestrzeni tabel",
+        "3": "segmentów",
+        "4": "plików poszczególnych tabel i widoków",
+        "5": "Przestrzeni tabel, a te z plików z danymi",
+        "6": "danych logów transakcyjnych zapisanych w plikach Spfile"
+      },
+      "poprawne_odpowiedzi": [
+        "5"
+      ]
+    },
+    {
+      "pytanie": "Podjęto decyzję o indeksacji danych adresowych miejscowość, ulica, nr_posesji. W tej sytuacji:",
+      "odpowiedzi": {
+        "1": "utworzenie jednego indeksu (miejscowość, ulica, nr_posesji) jest równoważne z utworzeniem dwóch indeksów (miejscowość) oraz (ulica, nr_posesji)",
+        "2": "z punktu widzenia sortowania preferowane jest utworzenie jednego indeksu (miejscowość, ulica, nr_posesji)",
+        "3": "z punktu widzenia sortowania preferowane jest utworzenie indeksu (miejscowość) oraz indeksu (ulica, nr_posesji)"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "W bazie danych Oracle, odtwarzanie bazy danych po uszkodzeniu jednego z plików z danymi, wymagać może użycia:",
+      "odpowiedzi": {
+        "1": "plików kopii bezpieczeństwa",
+        "2": "plików logów transakcyjnych w trybie on-line (redo log)",
+        "3": "plików archiwalnych logów transakcyjnych (archive log)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Zestawienie połączenia z aplikacji Java, wykorzystującej połączenie JDBC, z bazą danych udostępnianą w modelu klient-serwer (np. z bazą MS SQL Server lub Oracle) wymaga:",
+      "odpowiedzi": {
+        "1": "Znajomości języka SQL",
+        "2": "Pomyślnego wykonania autoryzacji",
+        "3": "Wskazania lokalizacji sieciowej systemu DBMS",
+        "4": "Wskazania sterownika wykorzystywanego do nawiązania połączenia",
+        "5": "Określenia parametrów połączenia sieciowego"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "pytanie": "To recover Oracle database within a short time, the following files can be useful:",
+      "odpowiedzi": {
+        "1": "whole backup",
+        "2": "online transaction logs",
+        "3": "archived transaction logs",
+        "4": "incremental logs",
+        "5": "incremental backups"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    }
+  ]
+}
