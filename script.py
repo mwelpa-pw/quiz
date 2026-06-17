@@ -175,7 +175,7 @@ def ask_question(question, question_number, total_questions, show_multiple_choic
     if is_multiple_choice and show_multiple_choice_info:
         print("\nTo pytanie ma wiele poprawnych odpowiedzi.")
         print(f"Wpisz odpowiedzi razem, np. {''.join(display_labels[:2])} albo {''.join(display_labels)}.")
-    elif is_multiple_choice and not show_multiple_choice_info:
+    elif not show_multiple_choice_info:
         print("\nTo pytanie może mieć jedną lub wiele poprawnych odpowiedzi.")
         print(f"Wpisz odpowiedzi razem, np. {''.join(display_labels[:2])} albo {''.join(display_labels)}.")
     else:

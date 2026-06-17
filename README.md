@@ -12,12 +12,15 @@ Otwórz terminal w folderze z projektem i wpisz:
 ```bash
 python script.py
 ```
-Aplikacja automatycznie wyszuka pliki `.json` w folderze `quizes/` i pozwoli Ci wybrać, który quiz chcesz rozwiązać.
+Aplikacja automatycznie wyszuka pliki `.json` w folderze `quizes/` (jeśli go nie ma, zostanie stworzony przy pierwszym uruchomieniu) i pozwoli Ci wybrać, który quiz chcesz rozwiązać.
+
+Program możesz w każdej chwili bezpiecznie przerwać, używając skrótu **Ctrl+C**.
 
 Przed rozpoczęciem quizu możesz wybrać:
 - **Od którego pytania zacząć** – przydatne, jeśli chcesz powtórzyć tylko końcówkę materiału.
 - **Czy pokazywać informację o wielokrotnym wyborze** – możesz wyłączyć tę podpowiedź, aby zwiększyć poziom trudności.
 - **Czy zapisać błędne odpowiedzi** – na koniec quizu aplikacja może wygenerować plik JSON z pytaniami, na które odpowiedziałeś błędnie (wraz z Twoimi odpowiedziami).
+- **Tryb nauki** – po zakończeniu quizu, jeśli miałeś błędy, możesz je od razu przećwiczyć. Aplikacja będzie wyświetlać błędne pytania do momentu, aż na wszystkie odpowiesz poprawnie.
 
 ## Jak dodawać własne quizy? ✍️
 
