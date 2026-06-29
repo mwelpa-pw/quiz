@@ -1,0 +1,918 @@
+{
+  "pytania": [
+    {
+      "pytanie": "Dla rozkładu normalnego N(μ, σ²), co oznacza DRUGI argument?",
+      "odpowiedzi": {
+        "1": "odchylenie standardowe σ",
+        "2": "wariancję σ²",
+        "3": "medianę",
+        "4": "wartość oczekiwaną"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Dla rozkładu wykładniczego Exp(λ) wartość oczekiwana E(X) wynosi:",
+      "odpowiedzi": {
+        "1": "λ",
+        "2": "1/λ",
+        "3": "1/λ²",
+        "4": "λ²"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Dla rozkładu Poissona Pois(λ) zachodzi:",
+      "odpowiedzi": {
+        "1": "E(X) = λ, Var(X) = λ",
+        "2": "E(X) = λ, Var(X) = λ²",
+        "3": "E(X) = 1/λ, Var(X) = 1/λ²",
+        "4": "E(X) = λ², Var(X) = λ"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Dla rozkładu jednostajnego U(a,b) wariancja wynosi:",
+      "odpowiedzi": {
+        "1": "(a+b)/2",
+        "2": "(b-a)/12",
+        "3": "(b-a)²/12",
+        "4": "(b-a)²/2"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Wzór roboczy na wariancję to:",
+      "odpowiedzi": {
+        "1": "Var(X) = E(X²) - (E(X))²",
+        "2": "Var(X) = (E(X))² - E(X²)",
+        "3": "Var(X) = E(X²) - E(X)",
+        "4": "Var(X) = E((X - E(X)))"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Ile wynosi Var(aX + b)?",
+      "odpowiedzi": {
+        "1": "a·Var(X) + b",
+        "2": "a²·Var(X) + b",
+        "3": "a²·Var(X)",
+        "4": "a·Var(X)"
+      },
+      "poprawne_odpowiedzi": [
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Które z poniższych są prawdziwe dla średniej z próby X̄? (próba losowa)",
+      "odpowiedzi": {
+        "1": "E(X̄) = E(X)",
+        "2": "Var(X̄) = Var(X)/n",
+        "3": "Var(X̄) = Var(X)",
+        "4": "E(X̄) = E(X)/n"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Jak liczymy dystrybuantę F(x) zmiennej ciągłej z gęstości f?",
+      "odpowiedzi": {
+        "1": "różniczkujemy f",
+        "2": "całkujemy f od -∞ do x",
+        "3": "całkujemy f od x do +∞",
+        "4": "F(x) = f(x)"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Które własności MUSI spełniać funkcja gęstości f?",
+      "odpowiedzi": {
+        "1": "f(x) ≥ 0 dla wszystkich x",
+        "2": "całka z f po całej prostej = 1",
+        "3": "f(x) ≤ 1 dla wszystkich x",
+        "4": "f jest rosnąca"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Estymator θ̂ jest NIEOBCIĄŻONY, gdy:",
+      "odpowiedzi": {
+        "1": "E(θ̂) = θ",
+        "2": "Var(θ̂) = 0",
+        "3": "θ̂ = θ zawsze",
+        "4": "lim E(θ̂) = 0"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Obciążenie estymatora b definiujemy jako:",
+      "odpowiedzi": {
+        "1": "E(θ̂) - θ",
+        "2": "θ - θ̂",
+        "3": "Var(θ̂) - θ",
+        "4": "E(θ̂) - E(θ)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Wzór na błąd średniokwadratowy MSE estymatora to:",
+      "odpowiedzi": {
+        "1": "Var(θ̂) + obciążenie²",
+        "2": "Var(θ̂) - obciążenie²",
+        "3": "Var(θ̂) + obciążenie",
+        "4": "obciążenie² - Var(θ̂)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Dla estymatora NIEOBCIĄŻONEGO MSE redukuje się do:",
+      "odpowiedzi": {
+        "1": "samego obciążenia²",
+        "2": "samej wariancji Var(θ̂)",
+        "3": "zera",
+        "4": "θ²"
+      },
+      "poprawne_odpowiedzi": [
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Jakie są 4 kroki metody największej wiarygodności (NW) dla parametru w środku wzoru?",
+      "odpowiedzi": {
+        "1": "L = iloczyn gęstości → ln L → pochodna = 0 → wylicz θ",
+        "2": "E(X) = X̄ → wylicz θ",
+        "3": "policz wariancję → przyrównaj do zera",
+        "4": "weź max z próby"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Kiedy metoda NW przez pochodną NIE działa (trzeba użyć min/max)?",
+      "odpowiedzi": {
+        "1": "gdy parametr jest w granicy nośnika (przedziału)",
+        "2": "gdy parametr jest w środku wzoru",
+        "3": "gdy próba jest duża",
+        "4": "nigdy, pochodna zawsze działa"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Schemat metody momentów (MM) to:",
+      "odpowiedzi": {
+        "1": "E(X) = X̄, wylicz parametr",
+        "2": "L → ln → pochodna = 0",
+        "3": "weź minimum z próby",
+        "4": "policz MSE"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Twierdzenie o zgodności: estymator jest zgodny, gdy jednocześnie:",
+      "odpowiedzi": {
+        "1": "jest asymptotycznie nieobciążony",
+        "2": "Var(θ̂) → 0 przy n → ∞",
+        "3": "jest nieobciążony dla każdego n",
+        "4": "MSE rośnie z n"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "pytanie": "Własność niezmienniczości NW: estymator NW funkcji g(θ) to:",
+      "odpowiedzi": {
+        "1": "g(θ̂_NW) — wstawiamy estymator NW do funkcji",
+        "2": "trzeba liczyć całą procedurę NW od nowa",
+        "3": "g(θ) bez zmian",
+        "4": "średnia z g(Xᵢ)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Dla U[0,θ] estymator NW parametru θ to:",
+      "odpowiedzi": {
+        "1": "max(X₁,...,Xₙ)",
+        "2": "min(X₁,...,Xₙ)",
+        "3": "2X̄",
+        "4": "X̄"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Aby wyznaczyć rozkład MAKSIMUM z próby, korzystamy z faktu, że:",
+      "odpowiedzi": {
+        "1": "F_max(t) = [F_X(t)]ⁿ (wszystkie Xᵢ ≤ t)",
+        "2": "F_max(t) = 1 - [1 - F_X(t)]ⁿ",
+        "3": "F_max(t) = n·F_X(t)",
+        "4": "F_max(t) = F_X(t)/n"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Aby wyznaczyć rozkład MINIMUM z próby, korzystamy ze wzoru:",
+      "odpowiedzi": {
+        "1": "F_min(t) = 1 - [1 - F_X(t)]ⁿ",
+        "2": "F_min(t) = [F_X(t)]ⁿ",
+        "3": "F_min(t) = n·F_X(t)",
+        "4": "F_min(t) = 1 - F_X(t)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "W tabelce rozkładu łącznego (X,Y), rozkład brzegowy X otrzymujemy przez:",
+      "odpowiedzi": {
+        "1": "sumowanie po wierszach (po wszystkich wartościach Y)",
+        "2": "sumowanie po kolumnach (po wszystkich wartościach X)",
+        "3": "mnożenie wszystkich komórek",
+        "4": "wzięcie maksimum z wiersza"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Zmienne X i Y są NIEZALEŻNE wtedy i tylko wtedy, gdy:",
+      "odpowiedzi": {
+        "1": "P(X=x, Y=y) = P(X=x)·P(Y=y) dla KAŻDEJ pary",
+        "2": "Cov(X,Y) = 0",
+        "3": "wystarczy, że jedna komórka = iloczyn brzegowych",
+        "4": "E(XY) = 0"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Wzór roboczy na kowariancję:",
+      "odpowiedzi": {
+        "1": "Cov(X,Y) = E(XY) - E(X)·E(Y)",
+        "2": "Cov(X,Y) = E(X)·E(Y) - E(XY)",
+        "3": "Cov(X,Y) = E(XY) - E(X) - E(Y)",
+        "4": "Cov(X,Y) = E(X²) - (E(X))²"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Które zdania o kowariancji i niezależności są PRAWDZIWE?",
+      "odpowiedzi": {
+        "1": "jeśli X,Y niezależne, to Cov(X,Y) = 0",
+        "2": "jeśli Cov(X,Y) = 0, to X,Y są niezależne",
+        "3": "Cov(X,Y) = 0 NIE gwarantuje niezależności",
+        "4": "Cov(X,X) = Var(X)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Które reguły algebry kowariancji są poprawne?",
+      "odpowiedzi": {
+        "1": "Cov(aX, Y) = a·Cov(X,Y)",
+        "2": "Cov(X, stała) = 0",
+        "3": "Cov(X,Y) = Cov(Y,X)",
+        "4": "Cov(X+Z, Y) = Cov(X,Y)·Cov(Z,Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Ile wynosi Var(aX + bY) (wzór ogólny z kowariancją)?",
+      "odpowiedzi": {
+        "1": "a²Var(X) + b²Var(Y) + 2ab·Cov(X,Y)",
+        "2": "a²Var(X) + b²Var(Y)",
+        "3": "aVar(X) + bVar(Y)",
+        "4": "a²Var(X) + b²Var(Y) - 2ab·Cov(X,Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "BŁĄD I RODZAJU w teście hipotez to:",
+      "odpowiedzi": {
+        "1": "odrzucenie H₀, gdy jest prawdziwa",
+        "2": "przyjęcie H₀, gdy jest fałszywa",
+        "3": "odrzucenie H₁, gdy jest prawdziwa",
+        "4": "przyjęcie H₁, gdy jest prawdziwa"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "BŁĄD II RODZAJU w teście hipotez to:",
+      "odpowiedzi": {
+        "1": "przyjęcie H₀, gdy jest fałszywa",
+        "2": "odrzucenie H₀, gdy jest prawdziwa",
+        "3": "odrzucenie H₀, gdy jest fałszywa",
+        "4": "przyjęcie H₀, gdy jest prawdziwa"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Poziom istotności α to:",
+      "odpowiedzi": {
+        "1": "maksymalne (akceptowane) prawdopodobieństwo błędu I rodzaju",
+        "2": "prawdopodobieństwo błędu II rodzaju",
+        "3": "moc testu",
+        "4": "prawdopodobieństwo przyjęcia H₀"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Funkcja mocy testu to prawdopodobieństwo, że:",
+      "odpowiedzi": {
+        "1": "test odrzuci H₀, jako funkcja parametru θ",
+        "2": "test przyjmie H₀",
+        "3": "popełnimy błąd I rodzaju",
+        "4": "próba będzie duża"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Jaki jest związek mocy z błędem II rodzaju?",
+      "odpowiedzi": {
+        "1": "moc = 1 - błąd II rodzaju",
+        "2": "moc = błąd II rodzaju",
+        "3": "moc = 1 - błąd I rodzaju",
+        "4": "moc = α"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Reguła decyzyjna w teście hipotez: jeśli statystyka testowa należy do zbioru krytycznego W, to:",
+      "odpowiedzi": {
+        "1": "odrzucamy H₀",
+        "2": "nie ma podstaw do odrzucenia H₀",
+        "3": "przyjmujemy H₀ jako prawdziwą",
+        "4": "powtarzamy test"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Dla testu średniej, gdy σ jest NIEZNANE, używamy statystyki:",
+      "odpowiedzi": {
+        "1": "T = (X̄ - μ₀)/s · √n (rozkład t-Studenta)",
+        "2": "U = (X̄ - μ₀)/σ · √n (rozkład normalny)",
+        "3": "χ² = (n-1)s²/σ₀²",
+        "4": "F = s₁²/s₂²"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Dla testu JEDNEJ wariancji statystyka testowa to:",
+      "odpowiedzi": {
+        "1": "χ² = (n-1)s²/σ₀²",
+        "2": "T = (X̄ - μ₀)/s · √n",
+        "3": "F = s₁²/s₂²",
+        "4": "U = (X̄ - μ₀)/σ · √n"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Jak dobieramy wartość krytyczną dla testu DWUSTRONNEGO (H₁: ≠)?",
+      "odpowiedzi": {
+        "1": "u_{1-α/2} (dzielimy α na dwa ogony)",
+        "2": "u_{1-α} (całe α w jednym ogonie)",
+        "3": "u_{α}",
+        "4": "u_{1-2α}"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Z treści 'czy średnia PRZEKRACZA wartość X' wynika hipoteza alternatywna:",
+      "odpowiedzi": {
+        "1": "H₁: μ > μ₀ (test prawostronny)",
+        "2": "H₁: μ < μ₀ (test lewostronny)",
+        "3": "H₁: μ ≠ μ₀ (test dwustronny)",
+        "4": "H₁: μ = μ₀"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Jakiego narzędzia używamy, gdy badamy wpływ DWÓCH czynników na wynik?",
+      "odpowiedzi": {
+        "1": "dwuczynnikowej ANOVY",
+        "2": "jednoczynnikowej ANOVY",
+        "3": "testu t dla jednej próby",
+        "4": "testu zgodności χ²"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Model dwuczynnikowej ANOVY to Y_ijm = μ + αᵢ + βⱼ + γᵢⱼ + εᵢⱼm. Co oznacza γᵢⱼ?",
+      "odpowiedzi": {
+        "1": "interakcję (współdziałanie) czynników A i B",
+        "2": "efekt czynnika A na poziomie i",
+        "3": "efekt czynnika B na poziomie j",
+        "4": "błąd losowy"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "W modelu ANOVY, co oznacza składowa αᵢ?",
+      "odpowiedzi": {
+        "1": "efekt i-tego poziomu czynnika A",
+        "2": "interakcję",
+        "3": "średnią ogólną",
+        "4": "błąd losowy"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Jakie są założenia modelu dwuczynnikowej ANOVY?",
+      "odpowiedzi": {
+        "1": "w każdej grupie rozkład odpowiedzi jest normalny",
+        "2": "wariancje w grupach są równe (jednakowe σ²)",
+        "3": "błędy są niezależne",
+        "4": "wszystkie obserwacje są identyczne"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Na wykresie średnich BRAK interakcji objawia się jako:",
+      "odpowiedzi": {
+        "1": "linie (łamane) w przybliżeniu równoległe",
+        "2": "linie przecinające się",
+        "3": "linie rozjeżdżające się",
+        "4": "jedna pozioma linia"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Hipoteza H₀AB w dwuczynnikowej ANOVIE mówi:",
+      "odpowiedzi": {
+        "1": "wszystkie γᵢⱼ = 0 (brak interakcji)",
+        "2": "wszystkie αᵢ = 0 (brak efektu A)",
+        "3": "wszystkie βⱼ = 0 (brak efektu B)",
+        "4": "μ = 0"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "W jakiej KOLEJNOŚCI testujemy hipotezy w dwuczynnikowej ANOVIE?",
+      "odpowiedzi": {
+        "1": "najpierw interakcję H₀AB, potem efekty główne A i B",
+        "2": "najpierw efekty główne, potem interakcję",
+        "3": "kolejność nie ma znaczenia",
+        "4": "tylko interakcję, nigdy efektów głównych"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Dlaczego najpierw testujemy interakcję?",
+      "odpowiedzi": {
+        "1": "bo jeśli interakcja jest istotna, badanie czystego efektu A czy B ma sens tylko przy ustalonym poziomie drugiego czynnika",
+        "2": "bo interakcja jest najmniej ważna",
+        "3": "bo to przyspiesza obliczenia",
+        "4": "bez powodu, to konwencja"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Standaryzacja w CTG: mianownik (do podzielenia Sₙ - nμ) to:",
+      "odpowiedzi": {
+        "1": "σ√n (odchylenie, = √(nσ²))",
+        "2": "nσ² (wariancja)",
+        "3": "σ²√n",
+        "4": "nσ"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład dwumianowy binom(n,p): E(X) i Var(X) wynoszą:",
+      "odpowiedzi": {
+        "1": "E=np, Var=np(1-p)",
+        "2": "E=np, Var=np",
+        "3": "E=p, Var=p(1-p)",
+        "4": "E=np(1-p), Var=np"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład dwupunktowy (Bernoulli) binom(1,p): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=p, Var=p(1-p)",
+        "2": "E=p, Var=p",
+        "3": "E=1-p, Var=p",
+        "4": "E=p², Var=p"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład Poissona Pois(λ): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=λ, Var=λ",
+        "2": "E=λ, Var=λ²",
+        "3": "E=1/λ, Var=1/λ²",
+        "4": "E=λ², Var=2λ"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład wykładniczy Exp(λ): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=1/λ, Var=1/λ²",
+        "2": "E=λ, Var=λ²",
+        "3": "E=1/λ, Var=1/λ",
+        "4": "E=λ, Var=1/λ²"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład jednostajny U(a,b): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=(a+b)/2, Var=(b-a)²/12",
+        "2": "E=(a+b)/2, Var=(b-a)/12",
+        "3": "E=(b-a)/2, Var=(b-a)²/12",
+        "4": "E=(a+b)/2, Var=(b-a)²/2"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Dla U[0,θ] (czyli a=0, b=θ): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=θ/2, Var=θ²/12",
+        "2": "E=θ, Var=θ²/12",
+        "3": "E=θ/2, Var=θ/12",
+        "4": "E=θ/2, Var=θ²/2"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład normalny N(μ, σ²): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=μ, Var=σ²",
+        "2": "E=μ, Var=σ",
+        "3": "E=μ², Var=σ²",
+        "4": "E=0, Var=1"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład chi-kwadrat χ²[n] (o n stopniach swobody): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=n, Var=2n",
+        "2": "E=n, Var=n",
+        "3": "E=2n, Var=n",
+        "4": "E=n/2, Var=n"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład t-Studenta t[n] (n>2): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=0, Var=n/(n-2)",
+        "2": "E=0, Var=1",
+        "3": "E=n, Var=2n",
+        "4": "E=0, Var=n"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Rozkład gamma Gamma(a,β): E(X) i Var(X) to:",
+      "odpowiedzi": {
+        "1": "E=a/β, Var=a/β²",
+        "2": "E=aβ, Var=aβ²",
+        "3": "E=a/β, Var=a/β",
+        "4": "E=β/a, Var=β/a²"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Metodą momentów dla U[0,θ] przyrównujemy E(X)=X̄. Skoro E(X)=θ/2, estymator MM to:",
+      "odpowiedzi": {
+        "1": "θ̂ = 2X̄",
+        "2": "θ̂ = X̄",
+        "3": "θ̂ = X̄/2",
+        "4": "θ̂ = max(Xᵢ)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "[MM] Cechą charakterystyczną rozkładu Poissona jest to, że:",
+      "odpowiedzi": {
+        "1": "E(X) = Var(X) = λ (średnia równa wariancji)",
+        "2": "E(X) = 2·Var(X)",
+        "3": "Var(X) = E(X)²",
+        "4": "E(X) = 1/Var(X)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Aby UDOWODNIĆ, że X i Y są ZALEŻNE, wystarczy:",
+      "odpowiedzi": {
+        "1": "znaleźć JEDNĄ komórkę, gdzie P(X=x,Y=y) ≠ P(X=x)·P(Y=y)",
+        "2": "sprawdzić wszystkie komórki",
+        "3": "pokazać, że Cov=0",
+        "4": "pokazać, że E(XY)=0"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Aby UDOWODNIĆ, że X i Y są NIEZALEŻNE, trzeba:",
+      "odpowiedzi": {
+        "1": "sprawdzić, że P(X=x,Y=y)=P(X=x)·P(Y=y) dla KAŻDEJ pary",
+        "2": "sprawdzić tylko jedną komórkę",
+        "3": "pokazać, że Cov=0",
+        "4": "pokazać, że E(X)=E(Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Jeśli X i Y są NIEZALEŻNE, to które są PRAWDZIWE?",
+      "odpowiedzi": {
+        "1": "E(XY) = E(X)·E(Y)",
+        "2": "Cov(X,Y) = 0",
+        "3": "Var(X+Y) = Var(X)+Var(Y)",
+        "4": "X i Y mają ten sam rozkład"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "pytanie": "Czy z Cov(X,Y)=0 wynika niezależność X i Y?",
+      "odpowiedzi": {
+        "1": "NIE — Cov=0 nie gwarantuje niezależności",
+        "2": "TAK, zawsze",
+        "3": "TAK, ale tylko dla rozkładów dyskretnych",
+        "4": "TAK, ale tylko dla normalnych"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Implikacja między niezależnością a kowariancją działa:",
+      "odpowiedzi": {
+        "1": "niezależne ⟹ Cov=0, ale NIE odwrotnie",
+        "2": "Cov=0 ⟹ niezależne, ale nie odwrotnie",
+        "3": "w obie strony",
+        "4": "w żadną stronę"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Dla NIEZALEŻNYCH X,Y ile wynosi Var(X+Y)?",
+      "odpowiedzi": {
+        "1": "Var(X)+Var(Y)",
+        "2": "Var(X)+Var(Y)+2Cov(X,Y)",
+        "3": "Var(X)·Var(Y)",
+        "4": "Var(X)-Var(Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Wzór roboczy (definicyjny w praktyce) na kowariancję:",
+      "odpowiedzi": {
+        "1": "Cov(X,Y)=E(XY)-E(X)E(Y)",
+        "2": "Cov(X,Y)=E(X)E(Y)-E(XY)",
+        "3": "Cov(X,Y)=E(XY)+E(X)E(Y)",
+        "4": "Cov(X,Y)=E(X²)-E(Y²)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Pełna definicja kowariancji to:",
+      "odpowiedzi": {
+        "1": "Cov(X,Y)=E[(X-EX)(Y-EY)]",
+        "2": "Cov(X,Y)=E[(X-EX)²]",
+        "3": "Cov(X,Y)=E[XY]",
+        "4": "Cov(X,Y)=E[X]E[Y]"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Ile wynosi Cov(X,X)?",
+      "odpowiedzi": {
+        "1": "Var(X)",
+        "2": "0",
+        "3": "E(X)²",
+        "4": "2Var(X)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Ile wynosi Cov(X, stała)?",
+      "odpowiedzi": {
+        "1": "0",
+        "2": "Var(X)",
+        "3": "E(X)",
+        "4": "stała·Var(X)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Które reguły algebry kowariancji są POPRAWNE?",
+      "odpowiedzi": {
+        "1": "Cov(aX,Y)=a·Cov(X,Y)",
+        "2": "Cov(X,Y)=Cov(Y,X) (symetria)",
+        "3": "Cov(X+Z,Y)=Cov(X,Y)+Cov(Z,Y)",
+        "4": "Cov(aX,bY)=ab·Cov(X,Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "pytanie": "Jak rozłożyć Cov(2X, 3X)?",
+      "odpowiedzi": {
+        "1": "6·Var(X)",
+        "2": "5·Var(X)",
+        "3": "Cov(X,X)",
+        "4": "Var(X)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Ile wynosi E(XY) dla rozkładu dyskretnego (z tabelki)?",
+      "odpowiedzi": {
+        "1": "suma po wszystkich komórkach: xᵢ·yⱼ·pᵢⱼ",
+        "2": "E(X)·E(Y) zawsze",
+        "3": "suma xᵢ·pᵢ",
+        "4": "max(X)·max(Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Ile wynosi Var(aX+bY) (wzór ogólny)?",
+      "odpowiedzi": {
+        "1": "a²Var(X)+b²Var(Y)+2ab·Cov(X,Y)",
+        "2": "a²Var(X)+b²Var(Y)",
+        "3": "aVar(X)+bVar(Y)",
+        "4": "a²Var(X)+b²Var(Y)-2ab·Cov(X,Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Aby rozłożyć Cov(aX+bY, cX+dY), traktujemy to jak:",
+      "odpowiedzi": {
+        "1": "mnożenie nawiasów (każdy z każdym), korzystając z dwuliniowości",
+        "2": "zwykłe dodawanie",
+        "3": "iloczyn dwóch wariancji",
+        "4": "sumę Var(X)+Var(Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Współczynnik korelacji ρ(X,Y) definiujemy jako:",
+      "odpowiedzi": {
+        "1": "Cov(X,Y)/(σ_X·σ_Y)",
+        "2": "Cov(X,Y)",
+        "3": "Cov(X,Y)/Var(X)",
+        "4": "E(XY)/E(X)E(Y)"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    },
+    {
+      "pytanie": "Współczynnik korelacji ρ(X,Y) przyjmuje wartości:",
+      "odpowiedzi": {
+        "1": "z przedziału [-1, 1]",
+        "2": "z przedziału [0, 1]",
+        "3": "dowolne rzeczywiste",
+        "4": "tylko 0 lub 1"
+      },
+      "poprawne_odpowiedzi": [
+        "1"
+      ]
+    }
+  ]
+}

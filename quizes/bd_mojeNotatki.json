@@ -1,0 +1,894 @@
+{
+  "pytania": [
+    {
+      "pytanie": "Co eliminuje 1NF (Pierwsza Forma Normalna)?",
+      "odpowiedzi": {
+        "1": "Kolumny wielowartościowe i powtarzające się grupy kolumn",
+        "2": "Częściowe zależności funkcyjne",
+        "3": "Przechodnie zależności funkcyjne",
+        "4": "Zależności między atrybutami niekluczowymi"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czego wymaga 2NF poza warunkami 1NF?",
+      "odpowiedzi": {
+        "1": "Braku częściowych zależności funkcyjnych",
+        "2": "Atomowości wartości w kolumnach",
+        "3": "Braku przechodnich zależności funkcyjnych",
+        "4": "Istnienia klucza obcego"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co eliminuje 3NF?",
+      "odpowiedzi": {
+        "1": "Zależność: część klucza złożonego → atrybut niekluczowy",
+        "2": "Zależność: atrybut niekluczowy → inny atrybut niekluczowy",
+        "3": "Kolumny wielowartościowe",
+        "4": "Brak klucza głównego"
+      },
+      "poprawne_odpowiedzi": ["2"]
+    },
+    {
+      "pytanie": "Czym jest klucz złożony (composite key)?",
+      "odpowiedzi": {
+        "1": "Kluczem składającym się z 2 lub więcej kolumn",
+        "2": "Kluczem generowanym automatycznie przez system",
+        "3": "Kluczem obcym wskazującym na inną tabelę",
+        "4": "Kluczem, który zawsze jest typu tekstowego"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym jest orphan record?",
+      "odpowiedzi": {
+        "1": "Rekordem, którego FK nie istnieje jako PK w tabeli odniesienia",
+        "2": "Rekordem bez klucza głównego",
+        "3": "Rekordem zduplikowanym w tabeli",
+        "4": "Rekordem usuniętym przez trigger"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czego DBMS nie pozwoli zrobić, jeśli istnieje kolumna FK odnosząca się do rekordu PK?",
+      "odpowiedzi": {
+        "1": "Wstawić do tabeli z FK wartości niemającej odniesienia do PK",
+        "2": "Usunąć z tabeli PK rekordu, do którego odnosi się FK",
+        "3": "Zmodyfikować rekord PK w sposób powodujący nieistniejące odniesienie FK",
+        "4": "Odczytać dane z tabeli za pomocą SELECT"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Czym jest surrogate key?",
+      "odpowiedzi": {
+        "1": "Identyfikatorem (id) zastępującym np. nazwę klienta",
+        "2": "Kluczem obcym wskazującym na widok",
+        "3": "Kluczem złożonym z dwóch kolumn tekstowych",
+        "4": "Indeksem niezgrupowanym"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie są trzy kategorie modeli danych (Data Model)?",
+      "odpowiedzi": {
+        "1": "Pojęciowy (konceptualny)",
+        "2": "Logiczny",
+        "3": "Fizyczny",
+        "4": "Relacyjny"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Co charakteryzuje model pojęciowy (konceptualny)?",
+      "odpowiedzi": {
+        "1": "Wysokopoziomowa reprezentacja operacji biznesowych, ograniczona do ~20 konceptów",
+        "2": "Zawiera encje z atrybutami, niezależny od technologii",
+        "3": "Reprezentuje techniczną implementację z odniesieniem do użytej technologii",
+        "4": "Zawiera definicje indeksów i partycji"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie złączenie SQL zwraca wszystko z lewej tabeli i uzupełnienia z prawej?",
+      "odpowiedzi": {
+        "1": "INNER JOIN",
+        "2": "LEFT JOIN",
+        "3": "RIGHT JOIN",
+        "4": "FULL JOIN"
+      },
+      "poprawne_odpowiedzi": ["2"]
+    },
+    {
+      "pytanie": "Jak działa operator EXISTS w SQL?",
+      "odpowiedzi": {
+        "1": "Sprawdza każdy wiersz tabeli zewnętrznej i jeśli podzapytanie skorelowane zwróci choć jeden wiersz, rekord trafia do wyniku",
+        "2": "Zwraca liczbę wierszy spełniających warunek",
+        "3": "Łączy dwa zapytania SELECT usuwając duplikaty",
+        "4": "Filtruje wyniki po wykonaniu funkcji agregujących"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co jest wymagane, aby użyć UNION na dwóch zapytaniach SELECT?",
+      "odpowiedzi": {
+        "1": "Kolumny obu zapytań i ich typy muszą się zgadzać",
+        "2": "Tabele muszą mieć ten sam klucz główny",
+        "3": "Musi istnieć indeks na obu tabelach",
+        "4": "Liczba wierszy musi być identyczna"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym różni się UNION od UNION ALL?",
+      "odpowiedzi": {
+        "1": "UNION automatycznie usuwa duplikaty, UNION ALL ich nie usuwa",
+        "2": "UNION ALL jest szybszy, bo łączy mniej kolumn",
+        "3": "UNION wymaga sortowania, a UNION ALL nie działa na tabelach z indeksem",
+        "4": "UNION ALL usuwa duplikaty, a UNION nie"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jak działa klauzula HAVING w porównaniu do WHERE?",
+      "odpowiedzi": {
+        "1": "Działa jak WHERE, ale filtruje po wywołaniu funkcji agregujących (GROUP BY, COUNT, SUM, AVG, MIN, MAX)",
+        "2": "Filtruje wiersze przed wykonaniem agregacji",
+        "3": "Może być używana tylko z JOIN",
+        "4": "Zastępuje GROUP BY"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym są widoki (Views) w bazach danych?",
+      "odpowiedzi": {
+        "1": "Zapisanymi zapytaniami bazodanowymi, które domyślnie nie przechowują fizycznie danych",
+        "2": "Fizycznymi kopiami tabel",
+        "3": "Strukturami służącymi do zwiększania bezpieczeństwa i integracji systemów",
+        "4": "Indeksami zgrupowanymi"
+      },
+      "poprawne_odpowiedzi": ["1", "3"]
+    },
+    {
+      "pytanie": "Dlaczego funkcje agregujące z NULL dają nieoczywiste wyniki?",
+      "odpowiedzi": {
+        "1": "Bo funkcje agregujące ignorują rekordy NULL, poza COUNT(*)",
+        "2": "Bo NULL jest traktowany jako 0",
+        "3": "Bo NULL powoduje błąd wykonania zapytania",
+        "4": "Bo NULL jest traktowany jako pusty string"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Które polecenia należą do DML (Data Manipulation Language)?",
+      "odpowiedzi": {
+        "1": "INSERT",
+        "2": "UPDATE",
+        "3": "DELETE",
+        "4": "CREATE"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Co oznacza vertical partitioning przy projektowaniu tabel?",
+      "odpowiedzi": {
+        "1": "Dzielenie tabeli (kolumn) na części",
+        "2": "Dzielenie rekordów na partycje, aby uniknąć przetwarzania wszystkich wierszy",
+        "3": "Tworzenie redundantnych widoków",
+        "4": "Dodawanie indeksów do każdej kolumny"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Które właściwości wchodzą w skład ACID?",
+      "odpowiedzi": {
+        "1": "Atomowość",
+        "2": "Spójność",
+        "3": "Izolacja",
+        "4": "Trwałość"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3", "4"]
+    },
+    {
+      "pytanie": "Czym jest atomowość transakcji?",
+      "odpowiedzi": {
+        "1": "Wykonywana jest cała transakcja albo wcale",
+        "2": "Baza zawsze jest w stanie poprawnym przed i po transakcji",
+        "3": "Niezakończone transakcje nie wpływają na inne",
+        "4": "Po zatwierdzeniu zmiany są zapisywane na stałe"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Do czego służy dziennik transakcji (transaction log)?",
+      "odpowiedzi": {
+        "1": "Rejestruje wszystkie zmiany, co pozwala odtworzyć spójność bazy w przypadku awarii",
+        "2": "Przechowuje dane tymczasowe do sortowania",
+        "3": "Określa lokalizację plików kontrolnych",
+        "4": "Zastępuje pliki danych (datafiles)"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Ile indeksów zgrupowanych (clustered index) może istnieć na jednej tabeli?",
+      "odpowiedzi": {
+        "1": "Tylko jeden",
+        "2": "Maksymalnie dwa",
+        "3": "Tyle, ile kolumn ma tabela",
+        "4": "Nieograniczona liczba"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jak nazywa się tabela bez indeksu zgrupowanego?",
+      "odpowiedzi": {
+        "1": "Heap (sterta)",
+        "2": "Cluster",
+        "3": "View",
+        "4": "Partition"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jaki jest negatywny wpływ indeksów na bazę danych?",
+      "odpowiedzi": {
+        "1": "Spowalniają operacje INSERT, UPDATE, DELETE, ponieważ muszą zaktualizować struktury drzew",
+        "2": "Zwiększają ryzyko utraty danych",
+        "3": "Wymagają zawsze klucza obcego",
+        "4": "Uniemożliwiają wykonywanie zapytań SELECT"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Na jakich kolumnach zaleca się unikać tworzenia indeksów?",
+      "odpowiedzi": {
+        "1": "Na kolumnach o niskiej selektywności (np. dwuwartościowych)",
+        "2": "Na kluczu głównym",
+        "3": "Na kluczach obcych",
+        "4": "Na kolumnach z dużą liczbą unikalnych wartości"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Do czego służy connection pooling?",
+      "odpowiedzi": {
+        "1": "Pozwala serwerom aplikacji utrzymywać i wielokrotnie wykorzystywać otwarte połączenia z bazą danych",
+        "2": "Tworzy nowe połączenie dla każdego zapytania",
+        "3": "Zwiększa narzut sieciowy",
+        "4": "Eliminuje potrzebę autoryzacji"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co decyduje o przypisaniu połączenia do danej puli (pool) w ADO.NET?",
+      "odpowiedzi": {
+        "1": "Unikalny connection string (distinct connection string)",
+        "2": "Nazwa wątku aplikacji",
+        "3": "Adres IP klienta",
+        "4": "Czas trwania sesji"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jak nazywa się rozwiązanie zabezpieczające przed SQL Injection?",
+      "odpowiedzi": {
+        "1": "Sparametryzowane zapytania (PreparedStatement)",
+        "2": "Bezpośrednie wstawianie parametrów użytkownika do zapytania SQL",
+        "3": "Wyłączenie logowania błędów",
+        "4": "Zwiększenie liczby indeksów"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Które z poniższych są anomaliami transakcyjnymi wynikającymi z braku pełnej izolacji?",
+      "odpowiedzi": {
+        "1": "Brudne odczyty (Dirty reads)",
+        "2": "Utracone aktualizacje (Lost updates)",
+        "3": "Niepowtarzalne odczyty (Non-repeatable reads)",
+        "4": "Fantomowe rekordy (Phantoms)"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3", "4"]
+    },
+    {
+      "pytanie": "Czym jest brudny odczyt (dirty read)?",
+      "odpowiedzi": {
+        "1": "Odczytem danych z transakcji, która nie została jeszcze zatwierdzona",
+        "2": "Dwukrotnym odczytem tego samego wiersza dającym różne wyniki",
+        "3": "Nadpisaniem zmian jednej transakcji przez drugą",
+        "4": "Sytuacją, gdy zapytanie zwraca inną liczbę rekordów przy ponownym wykonaniu"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co to są zakleszczenia (deadlocks)?",
+      "odpowiedzi": {
+        "1": "Sytuacja, w której co najmniej dwie transakcje wzajemnie blokują sobie dostęp do potrzebnych zasobów",
+        "2": "Sytuacja, w której transakcja czeka na zatwierdzenie zmian przez administratora",
+        "3": "Mechanizm automatycznego usuwania nieaktywnych połączeń",
+        "4": "Błąd składniowy w zapytaniu SQL"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jak zapobiega się zakleszczeniom (deadlockom)?",
+      "odpowiedzi": {
+        "1": "Wymuszając zawsze z góry ustalony porządek blokowania tabel i zasobów",
+        "2": "Zwiększając liczbę indeksów",
+        "3": "Wyłączając transakcje rozproszone",
+        "4": "Stosując tylko blokady współdzielone"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Kiedy zwalniane są blokady (locks)?",
+      "odpowiedzi": {
+        "1": "Gdy transakcja się zakończy",
+        "2": "Co 60 sekund automatycznie",
+        "3": "Gdy administrator je ręcznie usunie",
+        "4": "Nigdy, blokady są permanentne"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jaką wadę mają procedury składowane (stored procedures)?",
+      "odpowiedzi": {
+        "1": "Niską przenośność pomiędzy systemami od różnych producentów",
+        "2": "Zwiększają narzut sieciowy",
+        "3": "Nie mogą buforować planu wykonania",
+        "4": "Nie mogą być wywoływane przez aplikacje"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Ile razy uruchomi się trigger AFTER, jeśli jedno zapytanie modyfikuje 1000 rekordów?",
+      "odpowiedzi": {
+        "1": "Tylko raz dla całej operacji",
+        "2": "1000 razy, dla każdego rekordu osobno",
+        "3": "Dwa razy",
+        "4": "Zależy od typu bazy danych"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym różnią się triggery AFTER od INSTEAD OF?",
+      "odpowiedzi": {
+        "1": "AFTER wywoływany jest po modyfikacji danych, INSTEAD OF zamiast modyfikacji",
+        "2": "AFTER działa tylko na widokach, INSTEAD OF na tabelach",
+        "3": "INSTEAD OF jest wywoływany tylko przy SELECT",
+        "4": "Nie ma między nimi żadnej różnicy"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Dlaczego procedury składowane przyspieszają kolejne wywołania?",
+      "odpowiedzi": {
+        "1": "DBMS kompiluje je i buforuje ich plan wykonania",
+        "2": "Są zawsze wykonywane równolegle",
+        "3": "Nie wymagają połączenia z bazą danych",
+        "4": "Są wykonywane po stronie klienta"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie problemy mają klasyczne architektury oparte o pliki (np. SQLite) w systemach wielodostępnych?",
+      "odpowiedzi": {
+        "1": "Niskie bezpieczeństwo",
+        "2": "Słaba skalowalność",
+        "3": "Przeciążenie sieci",
+        "4": "Brak możliwości przechowywania danych"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Z jakich faz składa się dwufazowy protokół potwierdzeń (Two-phase commit)?",
+      "odpowiedzi": {
+        "1": "Faza przygotowania/głosowania",
+        "2": "Faza globalnego zatwierdzenia",
+        "3": "Faza replikacji asynchronicznej",
+        "4": "Faza sharding"
+      },
+      "poprawne_odpowiedzi": ["1", "2"]
+    },
+    {
+      "pytanie": "Czym charakteryzuje się replikacja w porównaniu do transakcji rozproszonych?",
+      "odpowiedzi": {
+        "1": "Działa szybciej i jest odporna na awarie pojedynczych serwerów, ale dopuszcza chwilowe opóźnienia w spójności",
+        "2": "Zapewnia idealną spójność na wszystkich serwerach naraz",
+        "3": "Awaria jednego serwera blokuje cały system",
+        "4": "Nie wymaga asynchronicznego przesyłania danych"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie są rodzaje replikacji wymienione w materiałach?",
+      "odpowiedzi": {
+        "1": "Transakcyjna",
+        "2": "Migawkowa (snapshot)",
+        "3": "Scalająca (merge)",
+        "4": "Sharding"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Czym charakteryzuje się model cold failover?",
+      "odpowiedzi": {
+        "1": "Serwer zapasowy jest całkowicie pasywny do momentu awarii serwera głównego",
+        "2": "Wszystkie serwery w klastrze przetwarzają zapytania jednocześnie",
+        "3": "Wymaga sharding'u danych",
+        "4": "Nie wymaga redundancji zasobów"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym charakteryzuje się OLTP (On-Line Transaction Processing)?",
+      "odpowiedzi": {
+        "1": "Obsługuje bieżącą działalność biznesową, szybkie proste operacje (INSERT, UPDATE), zwykle 3NF",
+        "2": "Skupia się na skomplikowanych zapytaniach analitycznych SELECT",
+        "3": "Wykorzystuje schemat gwiazdy",
+        "4": "Służy do wspomagania decyzji na podstawie danych historycznych"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym charakteryzuje się OLAP (On-Line Analytical Processing)?",
+      "odpowiedzi": {
+        "1": "Wspomaga decyzje poprzez analizę danych historycznych, korzysta np. ze schematu gwiazdy",
+        "2": "Obsługuje codzienne transakcje jak kasy sklepowe",
+        "3": "Skupia się na szybkim wykonywaniu prostych operacji INSERT",
+        "4": "Jest zawsze znormalizowane do 3NF"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jaka jest główna rola hurtowni danych (Data Warehouse)?",
+      "odpowiedzi": {
+        "1": "Integrowanie, oczyszczanie i historyzowanie danych z różnych baz w jednym miejscu",
+        "2": "Wykonywanie szybkich operacji INSERT i UPDATE",
+        "3": "Zastępowanie bazy transakcyjnej",
+        "4": "Przechowywanie danych przestrzennych"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co oznacza skrót ETL?",
+      "odpowiedzi": {
+        "1": "Extract, Transform, Load",
+        "2": "Extract, Transfer, Link",
+        "3": "Evaluate, Transform, Load",
+        "4": "Extract, Translate, Log"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co zawiera tabela faktów (Fact Table)?",
+      "odpowiedzi": {
+        "1": "Datę",
+        "2": "Id do kluczy atrybutów znajdujących się w tabelach wymiarów",
+        "3": "Liczbę mierzonych atrybutów (miary)",
+        "4": "Opisowe atrybuty geograficzne"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Co reprezentuje pojedyncza komórka w kostce danych (Data Cube)?",
+      "odpowiedzi": {
+        "1": "Wartość miary dla konkretnego przecięcia wymiarów",
+        "2": "Nazwę dimension table",
+        "3": "Klucz obcy do tabeli faktów",
+        "4": "Indeks zgrupowany"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co oznacza '3V' w kontekście Big Data?",
+      "odpowiedzi": {
+        "1": "Volume, Velocity, Variety",
+        "2": "Volume, Verification, Variety",
+        "3": "Velocity, Validity, Volume",
+        "4": "Variety, Verification, Velocity"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Które podejście do skalowania jest lepsze w kontekście Big Data?",
+      "odpowiedzi": {
+        "1": "Scaling out – dużo średniego sprzętu",
+        "2": "Scaling up – mało, ale mocny sprzęt",
+        "3": "Oba podejścia są równie dobre",
+        "4": "Żadne z powyższych, zawsze stosuje się jeden serwer"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym jest sharding?",
+      "odpowiedzi": {
+        "1": "Poziomym dzieleniem bazy danych na niezależne kawałki rozproszone na wielu serwerach",
+        "2": "Pionowym dzieleniem tabeli na kolumny",
+        "3": "Mechanizmem automatycznej kontroli kluczy obcych",
+        "4": "Synonimem indeksu zgrupowanego"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jaki jest koszt zastosowania sharding'u?",
+      "odpowiedzi": {
+        "1": "Rezygnacja z automatycznej kontroli kluczy obcych (integralności referencyjnej)",
+        "2": "Utrata możliwości skalowania",
+        "3": "Brak możliwości replikacji",
+        "4": "Wymóg posiadania jednego centralnego serwera"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Z czego składa się platforma Apache Hadoop?",
+      "odpowiedzi": {
+        "1": "HDFS (Hadoop Distributed File System)",
+        "2": "MapReduce",
+        "3": "Mechanizm sharding",
+        "4": "Schemat gwiazdy"
+      },
+      "poprawne_odpowiedzi": ["1", "2"]
+    },
+    {
+      "pytanie": "Czym różni się Schema-on-Write od Schema-on-Read?",
+      "odpowiedzi": {
+        "1": "Schema-on-Write narzuca schemat przed wgraniem danych, Schema-on-Read strukturyzuje dane przy odczycie",
+        "2": "Schema-on-Read jest stosowane wyłącznie w bazach relacyjnych",
+        "3": "Schema-on-Write jest typowe dla HDFS",
+        "4": "Nie ma między nimi żadnej różnicy"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Które bazy danych są przykładami baz kolumnowych?",
+      "odpowiedzi": {
+        "1": "Apache HBase",
+        "2": "Cassandra",
+        "3": "MongoDB",
+        "4": "Neo4j"
+      },
+      "poprawne_odpowiedzi": ["1", "2"]
+    },
+    {
+      "pytanie": "Jaka baza danych jest przykładem bazy dokumentowej?",
+      "odpowiedzi": {
+        "1": "MongoDB",
+        "2": "Redis",
+        "3": "Neo4j",
+        "4": "Cassandra"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jaka baza danych jest przykładem bazy grafowej?",
+      "odpowiedzi": {
+        "1": "Neo4j",
+        "2": "MongoDB",
+        "3": "Redis",
+        "4": "HBase"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym jest agregat w kontekście baz NoSQL?",
+      "odpowiedzi": {
+        "1": "Logiczną jednostką danych traktowaną jako nierozerwalna całość",
+        "2": "Synonimem indeksu",
+        "3": "Tabelą faktów",
+        "4": "Procedurą składowaną"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym różnią się bazy relacyjne (Aggregate-ignorant) od baz NoSQL (Aggregate-based)?",
+      "odpowiedzi": {
+        "1": "Relacyjne dzielą dane na atomowe wiersze w wielu tabelach i wspierają wielotabelowe ACID",
+        "2": "NoSQL łączą powiązane dane w jeden agregat, co umożliwia łatwy sharding, ale ogranicza ACID do jednego obiektu",
+        "3": "Bazy NoSQL zawsze wymuszają schemat przed zapisem danych",
+        "4": "Bazy relacyjne nie wspierają transakcji ACID"
+      },
+      "poprawne_odpowiedzi": ["1", "2"]
+    },
+    {
+      "pytanie": "Co głosi twierdzenie CAP (Brewer's theorem)?",
+      "odpowiedzi": {
+        "1": "Tylko dwie z trzech właściwości (Consistency, Availability, Partition tolerance) są możliwe w tym samym czasie",
+        "2": "Wszystkie trzy właściwości muszą być zapewnione równocześnie",
+        "3": "Partition tolerance jest opcjonalna w systemach rozproszonych",
+        "4": "Consistency jest zawsze priorytetem w systemach NoSQL"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co oznacza litera 'A' (Availability) w twierdzeniu CAP?",
+      "odpowiedzi": {
+        "1": "Każde zapytanie do działającego węzła kończy się sukcesem, bez gwarancji najświeższości danych",
+        "2": "Każdy węzeł zwraca dokładnie te same, najnowsze dane",
+        "3": "System działa dalej nawet po przerwaniu sieci między serwerami",
+        "4": "Dane są zawsze archiwizowane"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Między jakimi systemami wybiera się w praktyce z powodu nieuniknionych awarii sieci?",
+      "odpowiedzi": {
+        "1": "CP (priorytet spójności) i AP (priorytet dostępności)",
+        "2": "OLTP i OLAP",
+        "3": "Hot failover i cold failover",
+        "4": "HDFS i MapReduce"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jaki jest typowy port używany przez Oracle Net Listener?",
+      "odpowiedzi": {
+        "1": "1521",
+        "2": "3306",
+        "3": "5432",
+        "4": "1433"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jaka jest rola Oracle Listener?",
+      "odpowiedzi": {
+        "1": "Przechwytuje żądania od klienta i uruchamia/przydziela proces serwera",
+        "2": "Jest częścią instancji DBMS",
+        "3": "Przechowuje pliki kontrolne bazy danych",
+        "4": "Wykonuje zapytania SQL bezpośrednio na danych"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Który plik konfiguracyjny po stronie klienta mapuje aliasy na adresy serwerów?",
+      "odpowiedzi": {
+        "1": "tnsnames.ora",
+        "2": "listener.ora",
+        "3": "sqlnet.ora",
+        "4": "spfile.ora"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Które pliki konfiguracyjne sieci Oracle wymienione są w materiałach?",
+      "odpowiedzi": {
+        "1": "tnsnames.ora",
+        "2": "listener.ora",
+        "3": "sqlnet.ora",
+        "4": "redo.ora"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Do czego służy profil w bazie danych (np. Oracle)?",
+      "odpowiedzi": {
+        "1": "Wymuszanie polityki haseł",
+        "2": "Ograniczanie użycia zasobów (np. maksymalny czas bezczynności sesji)",
+        "3": "Tworzenie indeksów",
+        "4": "Definiowanie struktury tabel faktów"
+      },
+      "poprawne_odpowiedzi": ["1", "2"]
+    },
+    {
+      "pytanie": "Jaki parametr instancji włącza standardowe audytowanie w Oracle?",
+      "odpowiedzi": {
+        "1": "AUDIT_TRAIL",
+        "2": "FGA_ENABLE",
+        "3": "DBMS_FGA",
+        "4": "TRACE_LEVEL"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co umożliwia Fine-Grained Auditing (FGA)?",
+      "odpowiedzi": {
+        "1": "Precyzyjne śledzenie zapytań (w tym SELECT) na konkretnych wierszach czy kolumnach",
+        "2": "Tylko audytowanie operacji DELETE",
+        "3": "Centralizację logów ze wszystkich modułów bazy w jednym miejscu",
+        "4": "Blokowanie konta po nieudanych logowaniach"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym jest Unified Auditing?",
+      "odpowiedzi": {
+        "1": "Nowszym podejściem centralizującym logi ze wszystkich modułów bazy w jednym miejscu",
+        "2": "Pakietem do śledzenia tylko zapytań SELECT",
+        "3": "Mechanizmem blokowania kont użytkowników",
+        "4": "Synonimem AUDIT_TRAIL"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie typy obiektów wektorowych wyróżnia się w GIS?",
+      "odpowiedzi": {
+        "1": "Punkty",
+        "2": "Linie łamane (polylines)",
+        "3": "Wieloboki (polygons)",
+        "4": "Bitmapy"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Czym charakteryzują się warstwy rastrowe (raster layers) w GIS?",
+      "odpowiedzi": {
+        "1": "Są przechowywane jako bitmapy linkowane do geokoordynatów regionu",
+        "2": "Umożliwiają wyświetlanie w arbitralnej skali z równie wysoką jakością",
+        "3": "Są kolekcją obiektów z atrybutami opisowymi",
+        "4": "Umożliwiają sofistykowane zapytania przestrzenne"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Czym warstwy wektorowe różnią się od rastrowych?",
+      "odpowiedzi": {
+        "1": "Umożliwiają sofistykowane zapytania i mogą być wyświetlane w arbitralnej skali z równie wysoką jakością",
+        "2": "Są przechowywane jako bitmapy",
+        "3": "Nie posiadają atrybutów opisowych",
+        "4": "Nie obsługują układów współrzędnych"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Do czego stosuje się bazy wektorowe (vector databases)?",
+      "odpowiedzi": {
+        "1": "Systemy rekomendacyjne",
+        "2": "Wyszukiwanie semantyczne",
+        "3": "Rozwiązania klasy RAG z użyciem modeli LLM",
+        "4": "Przechowywanie warstw rastrowych GIS"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Jak nazywa się proces zamiany tekstów, obrazów czy dźwięków na wektory liczb zmiennoprzecinkowych?",
+      "odpowiedzi": {
+        "1": "Tworzenie osadzeń/zanurzeń (embeddings)",
+        "2": "Indeksowanie zgrupowane",
+        "3": "Sharding",
+        "4": "Normalizacja"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Dlaczego dokładne wyszukiwanie kNN jest problematyczne w bazach wektorowych?",
+      "odpowiedzi": {
+        "1": "Jest bardzo obciążające obliczeniowo",
+        "2": "Nie zwraca żadnych wyników",
+        "3": "Wymaga zawsze indeksu zgrupowanego",
+        "4": "Działa tylko na danych tekstowych"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co stosuje się w bazach wektorowych jako rozwiązanie problemu kosztu obliczeniowego kNN?",
+      "odpowiedzi": {
+        "1": "Wyszukiwanie przybliżone (ANN) oraz wyspecjalizowane indeksy wektorowe",
+        "2": "Sortowanie wektorów po wartości",
+        "3": "Zastąpienie wektorów liczbami całkowitymi",
+        "4": "Usunięcie funkcji dystansu"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie pliki są potrzebne, aby RDBMS mógł działać?",
+      "odpowiedzi": {
+        "1": "Pliki danych",
+        "2": "Logi transakcji (redo log files)",
+        "3": "Spfile i control files",
+        "4": "Pliki HDFS"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Jaka jest poprawna kolejność stanów instancji Oracle przy starcie?",
+      "odpowiedzi": {
+        "1": "SHUTDOWN → NOMOUNT → MOUNT → OPEN",
+        "2": "SHUTDOWN → MOUNT → NOMOUNT → OPEN",
+        "3": "NOMOUNT → SHUTDOWN → OPEN → MOUNT",
+        "4": "OPEN → MOUNT → NOMOUNT → SHUTDOWN"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Który tryb wyłączania bazy danych Oracle zawsze wymusza odtwarzanie instancji przy kolejnym uruchomieniu?",
+      "odpowiedzi": {
+        "1": "ABORT",
+        "2": "NORMAL",
+        "3": "TRANSACTIONAL",
+        "4": "IMMEDIATE"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie tryby wyłączania bazy Oracle dbają o spójność danych?",
+      "odpowiedzi": {
+        "1": "NORMAL",
+        "2": "TRANSACTIONAL",
+        "3": "IMMEDIATE",
+        "4": "ABORT"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Na jakim poziomie logicznym grupowane są pliki danych (Datafiles)?",
+      "odpowiedzi": {
+        "1": "Przestrzenie tabel (Tablespaces)",
+        "2": "Control files",
+        "3": "Redo log groups",
+        "4": "Listener"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie typy przestrzeni tabel (tablespaces) wyróżnia się w Oracle?",
+      "odpowiedzi": {
+        "1": "Permanent",
+        "2": "Temporary",
+        "3": "Undo",
+        "4": "Archive"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Dlaczego pliki kontrolne (control files) muszą być zwielokrotniane (multiplexed) na różnych dyskach?",
+      "odpowiedzi": {
+        "1": "Są absolutnie niezbędne do uruchomienia bazy i opisują całą jej strukturę",
+        "2": "Zawierają dane tymczasowe do sortowania",
+        "3": "Są używane wyłącznie do audytowania",
+        "4": "Przechowują dane raster GIS"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co umożliwia tryb ARCHIVELOG?",
+      "odpowiedzi": {
+        "1": "Odzyskanie bazy do dowolnego momentu w czasie po awarii dysku",
+        "2": "Przywrócenie danych jedynie do momentu ostatniego pełnego backupu",
+        "3": "Wyłączenie redo logów",
+        "4": "Pominięcie archiwizacji zapełnionych dzienników"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Co dzieje się z redo logami w trybie NOARCHIVELOG?",
+      "odpowiedzi": {
+        "1": "Nie idą do archiwum, są czyszczone i reużywane jako grupa",
+        "2": "Są kopiowane do archiwum przed nadpisaniem",
+        "3": "Są usuwane natychmiast po każdej transakcji",
+        "4": "Są przesyłane do innego serwera w czasie rzeczywistym"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Jakie kategorie kopii zapasowych RMAN wymienione są w materiałach?",
+      "odpowiedzi": {
+        "1": "Whole vs Partial",
+        "2": "Full vs Incremental",
+        "3": "Offline (Closed) vs Online (Open)",
+        "4": "ARCHIVELOG vs NOARCHIVELOG"
+      },
+      "poprawne_odpowiedzi": ["1", "2", "3"]
+    },
+    {
+      "pytanie": "Czym różni się backup Full od Incremental w RMAN?",
+      "odpowiedzi": {
+        "1": "Full to pełna kopia wszystkich bloków, Incremental tylko bloków zmienionych od ostatniego backupu",
+        "2": "Full wymaga wyłączenia bazy, Incremental nie",
+        "3": "Incremental jest zawsze większy niż Full",
+        "4": "Full jest dostępny tylko w trybie NOARCHIVELOG"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "Backup typu Online (Open) wymaga jakiego trybu pracy bazy?",
+      "odpowiedzi": {
+        "1": "ARCHIVELOG",
+        "2": "NOARCHIVELOG",
+        "3": "ABORT",
+        "4": "NOMOUNT"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    }
+  ]
+}

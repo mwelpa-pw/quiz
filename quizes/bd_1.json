@@ -1,0 +1,213 @@
+{
+  "pytania": [
+    {
+      "pytanie": "How can Oracle Net mechanisms be used to increase the availability of database management system instances, including reducing the risk of database inaccessibility due to failure of the Oracle listener process or network interface? (Please describe whether the proposed mechanisms are applicable in the case of using the Easy Connect option.)",
+      "odpowiedzi": {
+        "1": "Pytanie opisowe - odpowiedź pisemna wymagana"
+      },
+      "poprawne_odpowiedzi": [],
+      "typ": "opisowe"
+    },
+    {
+      "pytanie": "The head office must have a complete list of invoices, issued by a regional office by the end of the next business day. Both offices have their own DBMS instances. In such cases:",
+      "odpowiedzi": {
+        "1": "Issued by a regional office by the end of the next business day",
+        "2": "Both offices have their own DBMS instances - in such cases",
+        "3": "Transactional replication should be used",
+        "4": "A data warehouse is needed",
+        "5": "Distributed transactions should be used",
+        "6": "A vector database will be the best choice"
+      },
+      "poprawne_odpowiedzi": ["3"]
+    },
+    {
+      "pytanie": "A table of products has been designed, which includes a column with a list of parts comprising the product. Individual part names in this column are comma-separated. Such a table:",
+      "odpowiedzi": {
+        "1": "Is in the first normal form",
+        "2": "Is in the second normal form",
+        "3": "Is in the third normal form",
+        "4": "Is not normalised"
+      },
+      "poprawne_odpowiedzi": ["4"]
+    },
+    {
+      "pytanie": "A client application implemented using .NET can:",
+      "odpowiedzi": {
+        "1": "Execute SQL SELECT statements on a remote database",
+        "2": "Execute SQL INSERT statements on a remote database",
+        "3": "Be used for SQL injection attack attempts",
+        "4": "Execute parametrised queries, but this is not recommended"
+      },
+      "poprawne_odpowiedzi": ["1", "2"]
+    },
+    {
+      "pytanie": "Big Data is defined as:",
+      "odpowiedzi": {
+        "1": "High value data",
+        "2": "High quality data",
+        "3": "High volume data",
+        "4": "High velocity data",
+        "5": "High validity data"
+      },
+      "poprawne_odpowiedzi": ["3", "4"]
+    },
+    {
+      "pytanie": "A table in the second normal form:",
+      "odpowiedzi": {
+        "1": "Contains a primary key",
+        "2": "Can include non-atomic values",
+        "3": "Can include one column for all address data, i.e. (city, street, house number)",
+        "4": "Can contain a composite primary key",
+        "5": "Is also a table in the third normal form",
+        "6": "Includes no columns that depend on a part of the primary key only"
+      },
+      "poprawne_odpowiedzi": ["1", "4", "6"]
+    },
+    {
+      "pytanie": "The benefits of using a stored procedure compared to executing a batch of SQL statements include:",
+      "odpowiedzi": {
+        "1": "Improved performance",
+        "2": "Portability of the code among different DBMSs",
+        "3": "The ability not to use SQL at all",
+        "4": "The ability to easily execute the same sequence of SQL statements from client applications implemented with different programming languages"
+      },
+      "poprawne_odpowiedzi": ["1", "4"]
+    },
+    {
+      "pytanie": "There is a need to easily find all buildings located no more than 500 meters from the nearest highway and not owned by the city hall. To answer such a query:",
+      "odpowiedzi": {
+        "1": "Regular RDBMS should be used",
+        "2": "GIS system should be used",
+        "3": "Vector database should be used",
+        "4": "A vector layer of buildings and a vector layer of highways should be obtained",
+        "5": "A raster layer of buildings and a raster layer of highways should be obtained"
+      },
+      "poprawne_odpowiedzi": ["2", "4"]
+    },
+    {
+      "pytanie": "Please describe why Apache Hadoop is used for storing Big Data. Is Apache Hadoop a relational database management system? If not, what are the differences? (In addition: does Apache Hadoop rely on a schema-on-read or a schema-on-write approach, and which of these approaches is more appropriate for Big Data storage and why?)",
+      "odpowiedzi": {
+        "1": "Pytanie opisowe - odpowiedź pisemna wymagana"
+      },
+      "poprawne_odpowiedzi": [],
+      "typ": "opisowe"
+    },
+    {
+      "pytanie": "A table in the first normal form:",
+      "odpowiedzi": {
+        "1": "Contains a primary key",
+        "2": "Can include non-atomic values",
+        "3": "Can include one column for all address data i.e. (city, street, house number)",
+        "4": "Can contain a composite foreign key",
+        "5": "Includes no columns that depend on a part of the primary key only"
+      },
+      "poprawne_odpowiedzi": ["1", "4"]
+    },
+    {
+      "pytanie": "A many-to-many relation has been identified between tables A and B. This means:",
+      "odpowiedzi": {
+        "1": "Foreign keys have to be added to both of the tables",
+        "2": "A new table with one foreign key is needed",
+        "3": "A new table with two foreign keys and a primary key is needed",
+        "4": "A new table without foreign keys is needed",
+        "5": "A new table with two foreign keys and no primary key is needed"
+      },
+      "poprawne_odpowiedzi": ["3"]
+    },
+    {
+      "pytanie": "In case of failure, an Oracle database should be recovered as soon as possible till the moment preceding the failure. To make it possible, the following actions should be performed:",
+      "odpowiedzi": {
+        "1": "Whole backups should be created regularly",
+        "2": "Incremental backups should be created regularly",
+        "3": "Transaction logs should be archived",
+        "4": "As it is not possible to recover a database beyond the time of the last backup, backups have to be created every few minutes",
+        "5": "Operating system tools have to be used for making copies of a database while the database is used to make sure that recent backups exist"
+      },
+      "poprawne_odpowiedzi": ["1", "3"]
+    },
+    {
+      "pytanie": "An UPDATE SQL statement is executed. It encounters an exclusive lock. If so:",
+      "odpowiedzi": {
+        "1": "It will overwrite data without waiting for a lock to be released",
+        "2": "It will be suspended until the lock is released",
+        "3": "An error will be returned to the client application which has submitted the UPDATE SQL statement",
+        "4": "The transaction will be rolled back"
+      },
+      "poprawne_odpowiedzi": ["2"]
+    },
+    {
+      "pytanie": "NoSQL platforms:",
+      "odpowiedzi": {
+        "1": "Are defined through mathematical theory",
+        "2": "Use SQL as a primary way of interacting with the data",
+        "3": "Do not use SQL as a primary way of interacting with the data",
+        "4": "Do not use SQL at all",
+        "5": "Are always cluster platforms"
+      },
+      "poprawne_odpowiedzi": ["3"]
+    },
+    {
+      "pytanie": "Please describe the idea of a RAG system. Which kind of database is used by RAG solutions and why? (In addition: do RAG systems rely on exact or approximate search in a database? Please justify your answer.)",
+      "odpowiedzi": {
+        "1": "Pytanie opisowe - odpowiedź pisemna wymagana"
+      },
+      "poprawne_odpowiedzi": [],
+      "typ": "opisowe"
+    },
+    {
+      "pytanie": "A software developer wants to migrate an existing Java-based application relying on MS SQL Server (including 50 tables) to a NoSQL platform, such as Apache HBase. This means:",
+      "odpowiedzi": {
+        "1": "Only a change of the JDBC driver",
+        "2": "Typically a major change in the physical data model",
+        "3": "Major changes caused by no support for SQL in Apache HBase",
+        "4": "The benefits from the use of secondary indexes available in Apache HBase"
+      },
+      "poprawne_odpowiedzi": ["2", "3"]
+    },
+    {
+      "pytanie": "In the tax office database, there is a need to frequently search for citizens within the MS SQL Server database based on the name and surname of the person, both of which are provided at each time. To search efficiently, a reasonable solution is to:",
+      "odpowiedzi": {
+        "1": "Create two clustered indexes in the table",
+        "2": "Create two unclustered indexes in the table, one for name and one for surname",
+        "3": "Create one clustered index and one unclustered index, one for name and one for surname",
+        "4": "Create one unclustered index including both name and surname",
+        "5": "Not create any indexes"
+      },
+      "poprawne_odpowiedzi": ["4"]
+    },
+    {
+      "pytanie": "A physical data model:",
+      "odpowiedzi": {
+        "1": "Is developed after the DBMS platform is selected",
+        "2": "Includes indexes",
+        "3": "Is developed instead of a logical data model",
+        "4": "Is more intuitive for business users than the corresponding logical model",
+        "5": "Is very similar to the logical data model when the use of a NoSQL platform is planned"
+      },
+      "poprawne_odpowiedzi": ["1", "2"]
+    },
+    {
+      "pytanie": "CAP theorem:",
+      "odpowiedzi": {
+        "1": "States that only two out of three features (Consistency, Availability, Partition tolerance) are possible at the same time",
+        "2": "States that only one out of three features (Consistency, Availability, Partition tolerance) is possible at the same time",
+        "3": "States that all three features (Consistency, Availability, Partition tolerance) are possible at the same time",
+        "4": "States that all three features (Consistency, Availability, Portability) are possible at the same time",
+        "5": "Has been developed to address the way relational databases deployed on a single server can be configured"
+      },
+      "poprawne_odpowiedzi": ["1"]
+    },
+    {
+      "pytanie": "A table in third normal form:",
+      "odpowiedzi": {
+        "1": "Contains primary key",
+        "2": "Can include non-atomic values",
+        "3": "Can include one column for all address data, i.e. (city, street, house number)",
+        "4": "Can contain a composite primary key",
+        "5": "Can contain columns which depend on other columns, which are not a part of the primary key",
+        "6": "Can include columns that depend on a part of a primary key only"
+      },
+      "poprawne_odpowiedzi": ["1", "4"]
+    }
+  ]
+}
